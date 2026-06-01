@@ -8,7 +8,6 @@ export default function Layout({ children }) {
       <div className="top-bar">
         <div className="top-bar-inner">
           <a href="tel:+919676483331">📞 Ganesh Kowlasker - 96764 83331</a>
-          <a href="https://www.metropolisindia.com/" target="_blank" rel="noopener noreferrer">Metropolis Pathology Lab</a>
           <Link to="/contact">Contact Us</Link>
         </div>
       </div>

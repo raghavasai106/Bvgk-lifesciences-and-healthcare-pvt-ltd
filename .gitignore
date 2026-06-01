@@ -11,3 +11,4 @@ backend/obj/
 
 # OS
 .DS_Store
+.vscode/

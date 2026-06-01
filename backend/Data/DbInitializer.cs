@@ -32,5 +32,16 @@ public static class DbInitializer
             });
             await db.SaveChangesAsync();
         }
+
+        if (!await db.Admins.AnyAsync())
+        {
+            db.Admins.Add(new Admin
+            {
+                Username = "admin",
+                // Default password: Admin@123 — change after first login
+                PasswordHash = "$2b$10$sBUgwpZBu4FBb5gDAJx9dOiO4uE4LLbehbz4HnBqSrnNl5P.n/Yla"
+            });
+            await db.SaveChangesAsync();
+        }
     }
 }
