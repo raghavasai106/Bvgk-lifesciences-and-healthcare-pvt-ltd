@@ -1,55 +1,55 @@
 import { Link } from "react-router-dom";
 
-const services = [
+const divisions = [
   {
-    icon: "🧪",
-    title: "Laboratory Services",
+    icon: "🫀",
+    title: "Critical Care",
     to: "/services"
   },
   {
     icon: "🧬",
-    title: "Gene Diagnostics",
+    title: "Oncology",
     to: "/services"
   },
   {
-    icon: "🏠",
-    title: "Home Sample Collection",
-    to: "/contact"
+    icon: "💊",
+    title: "Nutraceuticals",
+    to: "/services"
+  },
+  {
+    icon: "📦",
+    title: "Our Products",
+    to: "/services"
   },
   {
     icon: "📋",
-    title: "Health Checkups",
-    to: "/services"
-  },
-  {
-    icon: "📄",
-    title: "Download Reports",
+    title: "Inquire Now",
     to: "/contact"
   }
 ];
 
 const pillars = [
   {
-    title: "Laboratory Services",
+    title: "Critical Care",
     detail:
-      "Comprehensive pathology tests including blood, urine, and clinical biochemistry with accurate, timely reporting."
+      "A focused portfolio of life-saving critical care products ensuring availability and reliability where it matters most."
   },
   {
-    title: "Gene Diagnostic Services",
+    title: "Oncology",
     detail:
-      "Advanced molecular and genetic testing for precise diagnosis and personalized healthcare insights."
+      "Specialised oncology formulations supporting treatment protocols with consistent quality and supply chain integrity."
   },
   {
-    title: "Home Sample Collection",
+    title: "Nutraceuticals",
     detail:
-      "Convenient at-home sample collection for patients who cannot visit our centre. We come to you."
+      "Science-backed nutraceutical products bridging the gap between nutrition and therapeutic outcomes."
   }
 ];
 
 const metrics = [
-  { value: "24/7", label: "Report availability" },
-  { value: "NABL & CAP", label: "Accredited laboratory" },
-  { value: "100+", label: "Test parameters" }
+  { value: "3", label: "Therapeutic divisions" },
+  { value: "PAN India", label: "Distribution reach" },
+  { value: "GMP", label: "Compliant manufacturing" }
 ];
 
 export default function HomePage() {
@@ -58,17 +58,19 @@ export default function HomePage() {
       <section className="diag-hero">
         <div className="diag-hero-inner">
           <div>
-            <p className="chip">Sri Sri Shanmukhi Diagnostic Centre</p>
-            <h1>Book Lab Tests & Gene Diagnostics with Trust and Precision</h1>
+            <p className="chip">BVGK Lifesciences and Healthcare Pvt Ltd</p>
+            <h1>Pharmaceutical Products Built for Critical Outcomes</h1>
             <p className="hero-copy">
-              Sri Sri Shanmukhi Diagnostic is an authorized service provider for <a href="https://www.metropolisindia.com/" target="_blank" rel="noopener noreferrer" className="metropolis-link">Metropolis Healthcare</a>. We offer comprehensive pathology and gene diagnostic services—from routine blood tests to advanced screening. Accurate results, timely reporting, and care at every step.
+              BVGK Lifesciences is a pharmaceutical company delivering quality-driven products
+              across Critical Care, Oncology, and Nutraceuticals. We partner with healthcare
+              professionals and institutions to ensure reliable supply and therapeutic impact.
             </p>
             <div className="hero-cta-group">
               <Link className="btn btn-primary" to="/contact">
-                Book a Test
+                Inquire Now
               </Link>
               <Link className="btn btn-ghost" to="/services">
-                Our Services
+                Our Divisions
               </Link>
             </div>
           </div>
@@ -77,9 +79,9 @@ export default function HomePage() {
 
       <section className="page-frame">
         <div className="page-container">
-          <h2 className="section-title">Our Services</h2>
+          <h2 className="section-title">Our Divisions</h2>
           <div className="quick-actions">
-            {services.map((item) => (
+            {divisions.map((item) => (
               <Link
                 key={item.title}
                 to={item.to}
@@ -100,7 +102,7 @@ export default function HomePage() {
             ))}
           </div>
 
-          <h2 className="section-title" style={{ marginTop: 48 }}>Why Choose Sri Sri Shanmukhi Diagnostic?</h2>
+          <h2 className="section-title" style={{ marginTop: 48 }}>Why BVGK Lifesciences?</h2>
           <div className="card-grid">
             {pillars.map((pillar) => (
               <article key={pillar.title} className="glass-card">

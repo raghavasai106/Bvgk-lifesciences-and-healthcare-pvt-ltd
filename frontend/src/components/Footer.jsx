@@ -4,17 +4,15 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="footer-inner">
-        <p>Sri Sri Shanmukhi Diagnostic Centre</p>
+        <p>BVGK Lifesciences and Healthcare Pvt Ltd</p>
         <p className="footer-copy">
-          Authorized service provider for{" "}
-          <a href="https://www.metropolisindia.com/" target="_blank" rel="noopener noreferrer" className="footer-metropolis-link">Metropolis Pathology Lab</a>.
-          NABL & CAP accredited. Laboratory services, gene diagnostics, and health checkups with accuracy and care.
+          Pharmaceutical company specialising in Critical Care, Oncology, and Nutraceuticals.
+          Quality products, reliable supply, and healthcare partnerships across India.
         </p>
         <div className="footer-contact">
-          <a href="tel:+919676483331">📞 Ganesh Kowlasker - 96764 83331</a>
-          <a href="https://www.metropolisindia.com/" target="_blank" rel="noopener noreferrer">Metropolis India</a>
-          <Link to="/contact">Contact Us</Link>
-          <Link to="/services">Our Services</Link>
+          <a href="tel:+919676483331">📞 96764 83331</a>
+          <Link to="/contact">Inquire Now</Link>
+          <Link to="/services">Our Divisions</Link>
         </div>
       </div>
     </footer>

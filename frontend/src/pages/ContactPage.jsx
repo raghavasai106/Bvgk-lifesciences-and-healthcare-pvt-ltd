@@ -14,14 +14,13 @@ export default function ContactPage() {
 
   async function handleSubmit(event) {
     event.preventDefault();
-    setStatus({ state: "loading", message: "Sending your request..." });
+    setStatus({ state: "loading", message: "Sending your inquiry..." });
 
     try {
-      const response = await sendContactMessage(form);
+      await sendContactMessage(form);
       setStatus({
         state: "success",
-        message:
-          response.message || "Your message has been sent. We will contact you shortly."
+        message: "Thank you for your inquiry. Our team will get back to you shortly."
       });
       setForm(initialForm);
     } catch (error) {
@@ -29,7 +28,7 @@ export default function ContactPage() {
         state: "error",
         message:
           error.message ||
-          "Unable to submit your request right now. Please try again."
+          "Unable to submit your inquiry right now. Please try again."
       });
     }
   }
@@ -42,69 +41,70 @@ export default function ContactPage() {
   return (
     <section className="page-frame">
       <div className="page-container">
-      <article className="feature-panel">
-        <p className="chip">Contact</p>
-        <h1>Book a test or get in touch</h1>
-        <p>
-          Book a lab test, request home sample collection, or enquire about our
-          gene diagnostic services. We will get back to you shortly.
-        </p>
-      </article>
+        <article className="feature-panel">
+          <p className="chip">Contact</p>
+          <h1>Partner with us or inquire about our products</h1>
+          <p>
+            Whether you are a distributor, healthcare professional, or institution
+            looking to partner with BVGK Lifesciences, reach out and our team will
+            respond promptly.
+          </p>
+        </article>
 
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <label>
-          Name
-          <input
-            name="name"
-            value={form.name}
-            onChange={updateField}
-            placeholder="Your full name"
-            required
-          />
-        </label>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <label>
+            Name
+            <input
+              name="name"
+              value={form.name}
+              onChange={updateField}
+              placeholder="Your full name"
+              required
+            />
+          </label>
 
-        <label>
-          Email
-          <input
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={updateField}
-            placeholder="you@company.com"
-            required
-          />
-        </label>
+          <label>
+            Email
+            <input
+              type="email"
+              name="email"
+              value={form.email}
+              onChange={updateField}
+              placeholder="you@company.com"
+              required
+            />
+          </label>
 
-        <label>
-          Phone
-          <input
-            name="phone"
-            value={form.phone}
-            onChange={updateField}
-            placeholder="+91 00000 00000"
-          />
-        </label>
+          <label>
+            Phone
+            <input
+              name="phone"
+              value={form.phone}
+              onChange={updateField}
+              placeholder="+91 00000 00000"
+            />
+          </label>
 
-        <label>
-          Message
-          <textarea
-            name="message"
-            value={form.message}
-            onChange={updateField}
-            placeholder="Tell us about the test you need or your query"
-            rows={5}
-            required
-          />
-        </label>
+          <label>
+            Message
+            <textarea
+              name="message"
+              value={form.message}
+              onChange={updateField}
+              placeholder="Tell us about your inquiry or how we can help"
+              rows={5}
+              required
+            />
+          </label>
 
-        <button className="btn btn-primary" type="submit" disabled={status.state === "loading"}>
-          {status.state === "loading" ? "Sending..." : "Book / Enquire"}
-        </button>
+          <button className="btn btn-primary" type="submit" disabled={status.state === "loading"}>
+            {status.state === "loading" ? "Sending..." : "Send Inquiry"}
+          </button>
 
-        {status.state !== "idle" && (
-          <p className={`form-status ${status.state}`}>{status.message}</p>
-        )}
-      </form>
+          {status.state !== "idle" && (
+            <p className={`form-status ${status.state}`}>{status.message}</p>
+          )}
+        </form>
       </div>
     </section>
   );

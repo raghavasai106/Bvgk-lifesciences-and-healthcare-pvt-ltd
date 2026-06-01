@@ -1,23 +1,18 @@
-const services = [
+const divisions = [
   {
-    title: "Laboratory Services",
+    title: "Critical Care",
     description:
-      "Comprehensive pathology tests including blood, urine, biochemistry, and clinical diagnostics with accurate, timely reporting."
+      "Life-saving formulations for ICU and emergency settings. Our critical care portfolio covers injectables, infusions, and supportive therapies designed for high-acuity clinical environments."
   },
   {
-    title: "Gene Diagnostics",
+    title: "Oncology",
     description:
-      "Advanced molecular and genetic testing for inherited conditions, pharmacogenomics, and personalized healthcare insights."
+      "Specialised oncology products supporting chemotherapy and supportive care protocols. We ensure consistent availability of oncology formulations for hospitals and cancer treatment centres."
   },
   {
-    title: "Home Sample Collection",
+    title: "Nutraceuticals",
     description:
-      "Convenient at-home blood and sample collection for patients who cannot visit our centre. Book online, we come to you."
-  },
-  {
-    title: "Health Checkup Packages",
-    description:
-      "Curated health packages for different age groups and lifestyles—preventive care made accessible and affordable."
+      "Science-backed nutraceutical products covering vitamins, minerals, and therapeutic nutrition. Designed to complement clinical treatment and support long-term wellness."
   }
 ];
 
@@ -26,21 +21,20 @@ export default function ServicesPage() {
     <section className="page-frame">
       <div className="page-container">
         <article className="feature-panel">
-          <p className="chip">Services</p>
-          <h1>Laboratory and Gene Diagnostic Services</h1>
+          <p className="chip">Divisions</p>
+          <h1>Three divisions. One standard of quality.</h1>
           <p>
-            As an authorized service provider for{" "}
-            <a href="https://www.metropolisindia.com/" target="_blank" rel="noopener noreferrer" className="metropolis-link">Metropolis Healthcare</a> (NABL & CAP accredited),
-            we offer a full range of diagnostic services—from routine lab tests to
-            advanced gene diagnostics—with accuracy, care, and timely reporting.
+            BVGK Lifesciences operates across Critical Care, Oncology, and
+            Nutraceuticals — each division built around a commitment to product
+            quality, reliable distribution, and meaningful clinical outcomes.
           </p>
         </article>
 
         <div className="card-grid">
-          {services.map((service) => (
-            <article className="glass-card" key={service.title}>
-              <h2>{service.title}</h2>
-              <p>{service.description}</p>
+          {divisions.map((division) => (
+            <article className="glass-card" key={division.title}>
+              <h2>{division.title}</h2>
+              <p>{division.description}</p>
             </article>
           ))}
         </div>

@@ -1,8 +1,8 @@
 const values = [
-  "Accuracy and precision in every test",
-  "NABL & CAP accredited laboratory standards",
-  "Timely reporting and transparent communication",
-  "Patient-first care and convenience"
+  "Consistent product quality across all therapeutic segments",
+  "Reliable supply chain and distribution partnerships",
+  "Compliance with GMP and regulatory standards",
+  "Patient outcomes at the centre of every decision"
 ];
 
 export default function AboutPage() {
@@ -11,18 +11,18 @@ export default function AboutPage() {
       <div className="page-container">
         <article className="feature-panel">
           <p className="chip">About Us</p>
-          <h1>Diagnostics with accuracy and care</h1>
+          <h1>Pharmaceutical excellence across critical therapies</h1>
           <p>
-            Sri Sri Shanmukhi Diagnostic Centre is an authorized service provider for{" "}
-            <a href="https://www.metropolisindia.com/" target="_blank" rel="noopener noreferrer" className="metropolis-link">Metropolis Healthcare</a>,
-            India&apos;s leading pathology and diagnostic lab. We deliver reliable
-            laboratory and gene diagnostic services to patients, clinicians, and
-            healthcare partners.
+            BVGK Lifesciences and Healthcare Pvt Ltd is a pharmaceutical company
+            focused on bringing quality-driven products to healthcare professionals
+            and institutions across India. We operate across three core divisions —
+            Critical Care, Oncology, and Nutraceuticals — ensuring both clinical
+            efficacy and supply reliability.
           </p>
           <p>
-            As a Metropolis partner, Sri Sri Shanmukhi Diagnostic offers accurate tests, timely reports,
-            home sample collection, and health checkup packages—backed by
-            Metropolis&apos;s NABL and CAP-accredited labs.
+            Our mission is to support better patient outcomes through consistent
+            product quality, ethical business practices, and strong partnerships
+            with the healthcare ecosystem.
           </p>
         </article>
 

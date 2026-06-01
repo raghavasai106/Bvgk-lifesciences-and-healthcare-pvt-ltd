@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 const navItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
-  { to: "/services", label: "Services" },
+  { to: "/services", label: "Divisions" },
   { to: "/contact", label: "Contact" }
 ];
 
@@ -13,11 +13,11 @@ export default function NavBar() {
       <div className="top-nav-inner">
         <div className="brand-block">
           <Link to="/" className="brand-logo-link">
-            <img src="/bvgk_pharma.jpeg" alt="Sri Sri Shanmukhi Diagnostic" className="brand-logo" />
+            <img src="/bvgk_pharma.jpeg" alt="BVGK Lifesciences" className="brand-logo" />
           </Link>
           <div>
-            <p className="brand-name">Sri Sri Shanmukhi Diagnostic</p>
-            <p className="brand-subtitle">Authorized Service Provider for Metropolis Pathology Lab</p>
+            <p className="brand-name">BVGK Lifesciences</p>
+            <p className="brand-subtitle">and Healthcare Pvt Ltd</p>
           </div>
         </div>
         <nav>
