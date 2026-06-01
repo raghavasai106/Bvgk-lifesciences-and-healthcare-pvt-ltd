@@ -1,6 +1,6 @@
-# BVGK Lifesciences Website
+# BVGK Lifesciences and Healthcare Pvt Ltd
 
-Monorepo for the BVGK Lifesciences company website with:
+Monorepo for the BVGK Lifesciences and Healthcare Pvt Ltd company website with:
 - `frontend`: React (Vite) SPA
 - `backend`: ASP.NET Core Web API (C#, .NET 10)
 
