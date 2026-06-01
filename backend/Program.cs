@@ -1,6 +1,9 @@
 using BvgkLifesciences.Api.Data;
 using BvgkLifesciences.Api.Models;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,10 +22,37 @@ builder.Services.AddCors(options =>
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("Default")));
 
+var jwtSettings = builder.Configuration.GetSection("JwtSettings");
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.TokenValidationParameters = new TokenValidationParameters
+        {
+            ValidateIssuer = true,
+            ValidateAudience = true,
+            ValidateLifetime = true,
+            ValidateIssuerSigningKey = true,
+            ValidIssuer = jwtSettings["Issuer"],
+            ValidAudience = jwtSettings["Audience"],
+            IssuerSigningKey = new SymmetricSecurityKey(
+                Encoding.UTF8.GetBytes(jwtSettings["SecretKey"]!))
+        };
+    });
+
+builder.Services.AddAuthorization();
+builder.Services.AddControllers();
+
 var app = builder.Build();
+
+using (var scope = app.Services.CreateScope())
+    await DbInitializer.SeedAsync(scope.ServiceProvider.GetRequiredService<AppDbContext>());
 
 app.UseHttpsRedirection();
 app.UseCors("Frontend");
+app.UseAuthentication();
+app.UseAuthorization();
+
+app.MapControllers();
 
 app.MapGet("/api/health", () =>
     Results.Ok(new { status = "ok", timestamp = DateTimeOffset.UtcNow }));
@@ -71,6 +101,12 @@ app.MapPost("/api/inquiries", async (InquiryRequest req, AppDbContext db) =>
     await db.SaveChangesAsync();
     return Results.Created($"/api/inquiries/{inquiry.Id}", inquiry);
 });
+
+app.MapGet("/api/inquiries", async (AppDbContext db) =>
+    Results.Ok(await db.Inquiries
+        .OrderByDescending(i => i.SubmittedAt)
+        .ToListAsync()))
+    .RequireAuthorization();
 
 app.Run();
 
