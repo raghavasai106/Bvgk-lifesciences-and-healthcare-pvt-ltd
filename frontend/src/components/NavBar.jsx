@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 
 const navItems = [
@@ -8,8 +9,16 @@ const navItems = [
 ];
 
 export default function NavBar() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="top-nav">
+    <header className={`top-nav${scrolled ? " scrolled" : ""}`}>
       <div className="top-nav-inner">
         <div className="brand-block">
           <Link to="/" className="brand-logo-link">
@@ -22,11 +31,12 @@ export default function NavBar() {
         </div>
         <nav>
           <ul className="nav-links">
-            {navItems.map((item) => (
+            {navItems.map(item => (
               <li key={item.to}>
                 <NavLink
                   to={item.to}
-                  className={({ isActive }) => (isActive ? "active-link" : "")}
+                  end={item.to === "/"}
+                  className={({ isActive }) => isActive ? "active-link" : ""}
                 >
                   {item.label}
                 </NavLink>
