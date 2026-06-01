@@ -1,16 +1,24 @@
-# Sri Sri Shanmukhi Diagnostic Website
+# BVGK Lifesciences Website
 
-Startup-ready monorepo for a healthcare company website with:
-- `frontend`: React (Vite) website
-- `backend`: ASP.NET Core Web API (`C#`)
+Monorepo for the BVGK Lifesciences company website with:
+- `frontend`: React (Vite) SPA
+- `backend`: ASP.NET Core Web API (C#, .NET 10)
 
 ## Project Structure
 
 ```text
 .
 ├── backend
-│   ├── LifelineHealth.Api.csproj
+│   ├── BvgkLifesciences.Api.csproj
 │   ├── Program.cs
+│   ├── Data/
+│   │   └── AppDbContext.cs
+│   ├── Models/
+│   │   ├── CompanyInfo.cs
+│   │   ├── Division.cs
+│   │   ├── Inquiry.cs
+│   │   └── Product.cs
+│   ├── Migrations/
 │   └── ...
 └── frontend
     ├── package.json
@@ -18,25 +26,27 @@ Startup-ready monorepo for a healthcare company website with:
     └── ...
 ```
 
-## Pages Implemented
+## Pages
 
 - Home
 - About
 - Services
 - Contact
 
-## API Endpoints Implemented
+## API Endpoints
 
-- `GET /api/health`
-- `GET /api/company`
-- `GET /api/services`
-- `POST /api/contact`
+- `GET  /api/health`
+- `GET  /api/company`
+- `GET  /api/products`
+- `GET  /api/products/{id}`
+- `GET  /api/divisions`
+- `POST /api/inquiries`
 
 ## Local Development
 
 ### 1) Backend (C#)
 
-Prerequisite: Install .NET 8 SDK
+Prerequisite: .NET 10 SDK and a running Postgres instance.
 
 ```bash
 cd backend
@@ -45,6 +55,20 @@ dotnet run
 ```
 
 The API runs on `http://localhost:5204`.
+
+Update the connection string in `appsettings.json` before running:
+
+```json
+"ConnectionStrings": {
+  "Default": "Host=localhost;Database=bvgk_lifesciences;Username=postgres;Password=postgres"
+}
+```
+
+Apply migrations:
+
+```bash
+dotnet ef database update
+```
 
 ### 2) Frontend (React)
 
@@ -56,22 +80,22 @@ npm run dev
 
 The frontend runs on `http://localhost:5173` and proxies `/api` calls to the backend.
 
-## Deploy Strategy (Cost-first, Scale-ready)
-
-1. Frontend: Deploy `frontend` to Cloudflare Pages
-2. Backend: Deploy `backend` to Azure Container Apps (Consumption)
-3. Database (future): Neon Postgres
-
-### Backend Container Build
+## Docker (Backend)
 
 ```bash
 cd backend
-docker build -t bvgk-pharma-api:latest .
+docker build -t bvgk-lifesciences-api:latest .
 ```
 
-## Next Build Steps
+## Deploy Strategy
 
-1. Add admin-friendly CMS fields for About/Services content.
-2. Persist contact messages to a real database.
-3. Add authentication for internal dashboard pages.
+1. Frontend: Vercel / Cloudflare Pages
+2. Backend: Azure Container Apps (Consumption)
+3. Database: Neon Postgres
+
+## Next Steps
+
+1. Seed initial CompanyInfo and Division data.
+2. Add admin dashboard for managing products.
+3. Add authentication for internal routes.
 4. Add SEO metadata and schema markup.
