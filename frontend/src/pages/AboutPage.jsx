@@ -1,39 +1,49 @@
 import Reveal from "../components/Reveal";
 
 const values = [
-  "Consistent product quality across all therapeutic segments",
-  "Reliable supply chain and distribution partnerships",
-  "Compliance with GMP and regulatory standards",
-  "Patient outcomes at the centre of every decision"
+  "GMP & regulatory compliance across every manufacturing partner",
+  "Rigorous QA/QC systems and analytical laboratory testing",
+  "Stability studies and documentation & data integrity on every batch",
+  "Supply reliability and packaging capability hospitals can depend on"
 ];
 
-const milestones = [
-  { year: "2020", text: "BVGK Lifesciences incorporated with a focus on Critical Care." },
-  { year: "2021", text: "Expanded into Oncology segment with key hospital partnerships." },
-  { year: "2022", text: "Launched Nutraceuticals division to address wellness gaps." },
-  { year: "2024", text: "Pan-India distribution network covering 15+ states." }
+const registry = [
+  { label: "Founded",         text: "2026 — BVGK Lifesciences & Healthcare Pvt Ltd, Secunderabad, Telangana" },
+  { label: "Drug License",    text: "Form 20B & Form 21B — TG/HYD/2026-151214" },
+  { label: "GSTIN",           text: "36AAOCB0928K1ZE" },
+  { label: "CIN",             text: "U86100TS2025PTC206078" },
+  { label: "Manufacturing",   text: "4 WHO-GMP certified CMOs across Himachal Pradesh, Haryana, Gujarat & Maharashtra" },
+  { label: "Coverage",        text: "Telangana, Andhra Pradesh, Karnataka & Tamil Nadu — expanding pan-India" }
 ];
 
 const team = [
   {
-    name: "Ganesh Kowlasker",
-    role: "Co-Founder",
-    email: "ganesh.kowlasker@bvgklifesciences.com",
-    linkedin: "https://www.linkedin.com/in/ganesh-kowlasker-05004435/",
-    phone: "+91 96764 83331",
-    bio: "Ganesh brings over a decade of experience in pharmaceutical sales, distribution, and healthcare partnerships across India. His deep domain expertise and trusted relationships with hospital networks and distributors form the commercial backbone of BVGK Lifesciences. He has built and led high-performing field teams across Telangana and Andhra Pradesh, driving consistent growth in Critical Care and Oncology segments.",
-    initials: "GK",
+    name: "Dr. Bollepalli Vishnu Vardhana Raju",
+    role: "Director",
+    bio: "An infectious disease specialist with more than two decades of clinical experience, bringing deep medical and scientific grounding to BVGK's anti-infective portfolio.",
+    initials: "BV",
     color: "#004433"
   },
   {
-    name: "Raghavasai Kowlasker",
-    role: "Director of Engineering",
-    email: "raghavasai.kowlasker@bvgklifesciences.com",
-    linkedin: null,
-    phone: null,
-    bio: "Raghavasai leads the technology function at BVGK Lifesciences, building the digital infrastructure that powers operations, distribution tracking, and partner integrations. He brings software engineering expertise to modernise how the company manages its product catalogue, inquiries, and internal workflows.",
-    initials: "RK",
+    name: "Addagulla Ramakrishna",
+    role: "Director",
+    bio: "Three decades of experience in pharmaceutical industry sales and marketing, training and development, anchoring BVGK's commercial and distribution strategy.",
+    initials: "AR",
     color: "#006644"
+  },
+  {
+    name: "Kowlasker Madhavi Sudha",
+    role: "Director",
+    bio: null,
+    initials: "KM",
+    color: "#00875A"
+  },
+  {
+    name: "Manchana Sravanthi",
+    role: "Director",
+    bio: null,
+    initials: "MS",
+    color: "#00A86B"
   }
 ];
 
@@ -46,8 +56,8 @@ export default function AboutPage() {
             <span className="section-eyebrow">About Us</span>
             <h1 className="section-title">Pharmaceutical excellence across critical therapies</h1>
             <p className="section-sub">
-              BVGK Lifesciences and Healthcare Pvt Ltd is a pharmaceutical company focused on
-              bringing quality-driven products to healthcare professionals and institutions across India.
+              BVGK Lifesciences and Healthcare Pvt Ltd is a pharmaceutical company bringing
+              WHO-GMP manufactured anti-infective therapies to hospitals across South India.
             </p>
           </Reveal>
         </div>
@@ -66,12 +76,16 @@ export default function AboutPage() {
               <span className="section-eyebrow">Who we are</span>
               <h2 className="section-title">A purpose-driven pharma company</h2>
               <p style={{ color: "var(--text-body)", lineHeight: 1.78, marginBottom: 16 }}>
-                We operate across three core divisions — Critical Care, Oncology, and Nutraceuticals —
-                ensuring both clinical efficacy and supply reliability for every product we carry.
+                BVGK Lifesciences &amp; Healthcare envisions a future where every critically ill
+                patient has access to high-quality, affordable therapies and clinical nutrition
+                support. Today our portfolio of five anti-infective products serves severe and
+                multidrug-resistant bacterial infections in critical care settings, with critical
+                care and oncology nutrition ranges launching soon.
               </p>
               <p style={{ color: "var(--muted)", lineHeight: 1.78 }}>
-                Our mission is to support better patient outcomes through consistent product quality,
-                ethical business practices, and strong partnerships with the healthcare ecosystem.
+                We aim to build a portfolio rooted in scientific rigor, manufacturing excellence,
+                and clinical partnership — becoming a preferred choice for hospitals in critical
+                care and nutrition.
               </p>
             </Reveal>
           </div>
@@ -83,7 +97,7 @@ export default function AboutPage() {
         <div className="page-container">
           <div className="about-split about-split-reverse">
             <Reveal>
-              <span className="section-eyebrow">Our Values</span>
+              <span className="section-eyebrow">Quality Assurance</span>
               <h2 className="section-title">What drives every decision</h2>
               <ul className="clean-list" style={{ marginTop: 24 }}>
                 {values.map(v => <li key={v}>{v}</li>)}
@@ -103,14 +117,15 @@ export default function AboutPage() {
         <div className="page-container">
           <Reveal>
             <span className="section-eyebrow">Leadership</span>
-            <h2 className="section-title">The team behind BVGK</h2>
+            <h2 className="section-title">The Board of Directors</h2>
             <p className="section-sub">
-              Founded and led by people with deep domain experience in pharma and technology.
+              Founded and led by people with deep domain experience in clinical medicine and
+              pharmaceutical commerce.
             </p>
           </Reveal>
           <div className="team-grid">
             {team.map((m, i) => (
-              <Reveal key={m.name} delay={i * 150}>
+              <Reveal key={m.name} delay={i * 120}>
                 <div className="team-card">
                   <div className="team-avatar" style={{ background: m.color }}>
                     {m.initials}
@@ -118,16 +133,7 @@ export default function AboutPage() {
                   <div className="team-info">
                     <h3>{m.name}</h3>
                     <span className="team-role">{m.role}</span>
-                    <p>{m.bio}</p>
-                    <div className="team-links">
-                      <a href={`mailto:${m.email}`} className="team-link">✉ {m.email}</a>
-                      {m.phone && <a href={`tel:${m.phone.replace(/\s/g, "")}`} className="team-link">📞 {m.phone}</a>}
-                      {m.linkedin && (
-                        <a href={m.linkedin} target="_blank" rel="noopener noreferrer" className="team-link team-linkedin">
-                          in LinkedIn
-                        </a>
-                      )}
-                    </div>
+                    {m.bio && <p>{m.bio}</p>}
                   </div>
                 </div>
               </Reveal>
@@ -136,19 +142,19 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Milestones */}
+      {/* Regulatory & Manufacturing */}
       <section className="page-frame bg-section">
         <div className="page-container">
           <Reveal>
-            <span className="section-eyebrow">Our Journey</span>
-            <h2 className="section-title">Key Milestones</h2>
+            <span className="section-eyebrow">Registered &amp; Regulated</span>
+            <h2 className="section-title">Company Snapshot</h2>
           </Reveal>
           <div style={{ marginTop: 40, display: "grid", gap: 16 }}>
-            {milestones.map((m, i) => (
-              <Reveal key={m.year} delay={i * 80}>
+            {registry.map((r, i) => (
+              <Reveal key={r.label} delay={i * 60}>
                 <div className="milestone-row">
-                  <span className="milestone-year">{m.year}</span>
-                  <span className="milestone-text">{m.text}</span>
+                  <span className="milestone-year">{r.label}</span>
+                  <span className="milestone-text">{r.text}</span>
                 </div>
               </Reveal>
             ))}

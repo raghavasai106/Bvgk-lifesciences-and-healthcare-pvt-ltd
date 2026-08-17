@@ -5,9 +5,10 @@ import { sendContactMessage } from "../services/companyApi";
 const initialForm = { name: "", email: "", phone: "", message: "" };
 
 const contactDetails = [
-  { icon: "📞", label: "Phone", value: "+91 96764 83331" },
+  { icon: "📞", label: "Phone", value: "+91 96764 83331 · +91 94401 13831" },
   { icon: "📧", label: "Email", value: "info@bvgklifesciences.com" },
-  { icon: "📍", label: "Location", value: "Hyderabad, Telangana, India" }
+  { icon: "🏢", label: "Registered Office", value: "12-13-485/5/1, Street No. 14, Nagajunar Nagar Colony, Tarnaka, Secunderabad – 500017, Telangana" },
+  { icon: "📦", label: "Other Office / Warehouse", value: "Plot 571, Category MIG, Adobe Anandam, Nalagandla, Lingampally, Serilingampally, K.V. Rangareddy – 500019, Telangana" }
 ];
 
 export default function ContactPage() {
@@ -40,7 +41,7 @@ export default function ContactPage() {
             <h1 className="section-title">Partner with us or inquire about our products</h1>
             <p className="section-sub">
               Whether you're a distributor, healthcare professional, or institution —
-              our team is ready to help.
+              our team is ready to help. Distributor and career inquiries are welcome too.
             </p>
           </Reveal>
         </div>
@@ -48,7 +49,7 @@ export default function ContactPage() {
 
       <section className="page-frame">
         <div className="page-container">
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1.4fr", gap: 64, alignItems: "start" }}>
+          <div className="contact-grid">
 
             <Reveal>
               <span className="section-eyebrow">Reach us directly</span>
@@ -63,7 +64,7 @@ export default function ContactPage() {
                     <span style={{ fontSize: "1.4rem" }}>{c.icon}</span>
                     <div>
                       <p style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--primary)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 4 }}>{c.label}</p>
-                      <p style={{ color: "var(--text-dark)", fontWeight: 500 }}>{c.value}</p>
+                      <p style={{ color: "var(--text-dark)", fontWeight: 500, lineHeight: 1.6 }}>{c.value}</p>
                     </div>
                   </div>
                 ))}

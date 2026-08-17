@@ -3,41 +3,41 @@ import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
 
 const stats = [
-  { end: 50,  suffix: "+", label: "Products" },
-  { end: 3,   suffix: "",  label: "Divisions" },
-  { end: 100, suffix: "+", label: "Healthcare Partners" },
-  { end: 15,  suffix: "+", label: "States Covered" }
+  { end: 5,  suffix: "+", label: "Products in Market" },
+  { end: 3,  suffix: "",  label: "Therapeutic Divisions" },
+  { end: 10, suffix: "+", label: "Distributor Partners" },
+  { end: 4,  suffix: "",  label: "States Covered" }
 ];
 
 const divisions = [
   {
-    icon: "🫀",
-    name: "Critical Care",
+    icon: "🦠",
+    name: "Anti-Infectives & Critical Care",
     img: "/piron-guillaume-U4FyCp3-KzY-unsplash.jpg",
-    desc: "Life-saving formulations for ICU and emergency settings — injectables, infusions, and supportive therapies built for high-acuity clinical environments.",
+    desc: "Our current portfolio — five injectable anti-infectives for severe and multidrug-resistant bacterial infections, trusted in ICU and hospital settings.",
+    to: "/products"
+  },
+  {
+    icon: "🍽️",
+    name: "Critical Care Nutrition",
+    img: "/istockphoto-2261362906-1024x1024.jpg",
+    desc: "Launching soon — clinical nutrition support built for critically ill patients recovering in intensive and post-surgical care.",
     to: "/services"
   },
   {
     icon: "🧬",
-    name: "Oncology",
+    name: "Oncology Nutrition",
     img: "/owen-beard-DK8jXx1B-1c-unsplash.jpg",
-    desc: "Specialised oncology formulations supporting chemotherapy and supportive care protocols with consistent quality and uninterrupted supply.",
-    to: "/services"
-  },
-  {
-    icon: "💊",
-    name: "Nutraceuticals",
-    img: "/istockphoto-2261362906-1024x1024.jpg",
-    desc: "Science-backed vitamins, minerals, and therapeutic nutrition that bridges clinical treatment and long-term patient wellness.",
+    desc: "Launching soon — nutrition support designed to complement chemotherapy and long-term recovery for oncology patients.",
     to: "/services"
   }
 ];
 
 const reasons = [
-  { icon: "✅", title: "GMP Compliant",       desc: "All products manufactured in GMP-certified facilities, ensuring every batch meets strict quality benchmarks." },
-  { icon: "🚚", title: "Pan-India Supply",    desc: "Reliable distribution covering 15+ states — so the right product reaches the right place on time." },
-  { icon: "🔬", title: "R&D Focused",         desc: "Continuous investment in formulation development keeps our portfolio clinically relevant and competitive." },
-  { icon: "🤝", title: "Strong Partnerships", desc: "Long-term trust-based relationships with hospitals, distributors, and healthcare professionals across India." }
+  { icon: "✅", title: "WHO-GMP Manufacturing",  desc: "Every product is manufactured through WHO-GMP certified contract manufacturing partners across Himachal Pradesh, Haryana, Gujarat, and Maharashtra." },
+  { icon: "🔬", title: "Rigorous Quality Checks", desc: "Analytical testing, stability studies, and documentation integrity are verified on every batch before it reaches a hospital shelf." },
+  { icon: "🚚", title: "Regional Supply Network", desc: "Active across Telangana, Andhra Pradesh, Karnataka, and Tamil Nadu through 10 distributor partners, with pan-India expansion underway." },
+  { icon: "🤝", title: "Clinical Leadership",     desc: "Guided by an infectious disease specialist with 20+ years of clinical practice and a leadership team with three decades in pharma sales and marketing." }
 ];
 
 function StatCounter({ end, suffix, label }) {
@@ -86,15 +86,16 @@ export default function HomePage() {
           <div className="hero-text">
             <p className="hero-eyebrow">BVGK Lifesciences and Healthcare Pvt Ltd</p>
             <h1 className="hero-title">
-              Pharmaceutical Products Built for <span>Critical Outcomes</span>
+              Advancing Health, <span>Enriching Lives</span>
             </h1>
             <p className="hero-sub">
-              Delivering quality-driven products across Critical Care, Oncology, and Nutraceuticals.
-              Trusted by healthcare professionals and institutions across India.
+              Delivering WHO-GMP manufactured anti-infective therapies for critical care —
+              with oncology and critical care nutrition ranges launching soon. Trusted by
+              hospitals and distributors across South India.
             </p>
             <div className="hero-actions">
               <Link className="btn btn-primary" to="/contact">Inquire Now</Link>
-              <Link className="btn btn-ghost" to="/services">Our Divisions</Link>
+              <Link className="btn btn-ghost" to="/products">View Products</Link>
             </div>
           </div>
           <div className="hero-img-wrap">
@@ -103,8 +104,8 @@ export default function HomePage() {
               alt="Healthcare professional with patient"
             />
             <div className="hero-img-badge">
-              <span className="hero-img-badge-num">10+</span>
-              <span>Years of<br/>Excellence</span>
+              <span className="hero-img-badge-num">4</span>
+              <span>WHO-GMP Certified<br/>Manufacturing Partners</span>
             </div>
           </div>
         </div>
@@ -124,8 +125,8 @@ export default function HomePage() {
             <span className="section-eyebrow">What we do</span>
             <h2 className="section-title">Three Divisions. One Standard of Quality.</h2>
             <p className="section-sub">
-              Each division is built around a commitment to product efficacy, reliable
-              distribution, and meaningful clinical impact.
+              A focused anti-infectives portfolio in market today, with critical care
+              and oncology nutrition ranges in active development.
             </p>
           </Reveal>
           <div className="divisions-grid">

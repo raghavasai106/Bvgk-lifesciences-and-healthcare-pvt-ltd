@@ -32,7 +32,7 @@ export default function AdminLoginPage() {
   return (
     <div className="admin-login-wrap">
       <form className="admin-login-form" onSubmit={handleSubmit}>
-        <p className="brand-name" style={{ marginBottom: 4 }}>BVGK Lifesciences</p>
+        <p className="brand-name" style={{ marginBottom: 4, color: "var(--text-dark)" }}>BVGK Lifesciences</p>
         <h1>Admin Login</h1>
         <label>
           Username

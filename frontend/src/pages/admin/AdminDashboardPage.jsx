@@ -38,7 +38,7 @@ export default function AdminDashboardPage() {
   return (
     <div className="admin-wrap">
       <header className="admin-header">
-        <span className="brand-name">BVGK Admin</span>
+        <span className="brand-name" style={{ color: "var(--text-dark)" }}>BVGK Admin</span>
         <button className="btn btn-ghost" onClick={logout}>Logout</button>
       </header>
       <main className="admin-main">
