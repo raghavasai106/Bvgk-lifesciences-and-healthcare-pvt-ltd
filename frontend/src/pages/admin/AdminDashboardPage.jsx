@@ -69,11 +69,11 @@ export default function AdminDashboardPage() {
                     <td>{new Date(i.submittedAt).toLocaleDateString("en-IN")}</td>
                     <td>{i.name}</td>
                     <td><a href={`mailto:${i.email}`}>{i.email}</a></td>
-                    <td>{i.phone || "—"}</td>
-                    <td>{i.company || "—"}</td>
-                    <td>{i.territory || "—"}</td>
+                    <td>{i.phone || "N/A"}</td>
+                    <td>{i.company || "N/A"}</td>
+                    <td>{i.territory || "N/A"}</td>
                     <td>{i.type}</td>
-                    <td>{i.message || "—"}</td>
+                    <td>{i.message || "N/A"}</td>
                   </tr>
                 ))}
               </tbody>

@@ -8,19 +8,18 @@ const values = [
 ];
 
 const registry = [
-  { label: "Founded",         text: "2026 — BVGK Lifesciences & Healthcare Pvt Ltd, Secunderabad, Telangana" },
-  { label: "Drug License",    text: "Form 20B & Form 21B — TG/HYD/2026-151214" },
-  { label: "GSTIN",           text: "36AAOCB0928K1ZE" },
-  { label: "CIN",             text: "U86100TS2025PTC206078" },
+  { label: "Founded",         text: "2026, BVGK Lifesciences & Healthcare Pvt Ltd, Secunderabad, Telangana" },
+  { label: "Drug License",    text: "Form 20B & Form 21B: TG/HYD/2026-151214" },
   { label: "Manufacturing",   text: "4 WHO-GMP certified CMOs across Himachal Pradesh, Haryana, Gujarat & Maharashtra" },
-  { label: "Coverage",        text: "Telangana, Andhra Pradesh, Karnataka & Tamil Nadu — expanding pan-India" }
+  { label: "Coverage",        text: "Telangana, Andhra Pradesh, Karnataka & Tamil Nadu, expanding pan-India" }
 ];
 
 const team = [
   {
     name: "Dr. Bollepalli Vishnu Vardhana Raju",
-    role: "Director",
-    bio: "An infectious disease specialist with more than two decades of clinical experience, bringing deep medical and scientific grounding to BVGK's anti-infective portfolio.",
+    role: "Director & Clinical Advisor",
+    credentials: "MBBS, DA, IDCCM, EDIC, MBA (Hospital Administration)",
+    bio: "A Critical Care Consultant and ICU administrator with expertise spanning sepsis and septic shock management, mechanical ventilation, antimicrobial stewardship, and critical care nutrition. As Director and Clinical Advisor, he provides the clinical and scientific grounding behind BVGK's anti-infective and nutrition portfolio.",
     initials: "BV",
     color: "#004433"
   },
@@ -44,6 +43,13 @@ const team = [
     bio: null,
     initials: "MS",
     color: "#00A86B"
+  },
+  {
+    name: "Ganesh Kowlasker",
+    role: "General Manager, Sales & Marketing",
+    bio: "32 years in pharmaceutical sales and business development, from Medical Sales Representative to Assistant General Manager across UCB Pharma, Mylan and Viatris, including building Mylan's HIV Care division from the ground up and growing the Syntocinon brand to over 60% market share. Leads BVGK's sales and marketing strategy.",
+    initials: "GK",
+    color: "#00BF8F"
   }
 ];
 
@@ -84,7 +90,7 @@ export default function AboutPage() {
               </p>
               <p style={{ color: "var(--muted)", lineHeight: 1.78 }}>
                 We aim to build a portfolio rooted in scientific rigor, manufacturing excellence,
-                and clinical partnership — becoming a preferred choice for hospitals in critical
+                and clinical partnership, becoming a preferred choice for hospitals in critical
                 care and nutrition.
               </p>
             </Reveal>
@@ -117,7 +123,7 @@ export default function AboutPage() {
         <div className="page-container">
           <Reveal>
             <span className="section-eyebrow">Leadership</span>
-            <h2 className="section-title">The Board of Directors</h2>
+            <h2 className="section-title">Board & Leadership Team</h2>
             <p className="section-sub">
               Founded and led by people with deep domain experience in clinical medicine and
               pharmaceutical commerce.
@@ -133,6 +139,7 @@ export default function AboutPage() {
                   <div className="team-info">
                     <h3>{m.name}</h3>
                     <span className="team-role">{m.role}</span>
+                    {m.credentials && <span className="team-credentials">{m.credentials}</span>}
                     {m.bio && <p>{m.bio}</p>}
                   </div>
                 </div>

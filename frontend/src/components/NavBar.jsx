@@ -12,7 +12,7 @@ const navItems = [
 ];
 
 export default function NavBar() {
-  const [scrolled, setScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(() => window.scrollY > 60);
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
 
@@ -23,6 +23,8 @@ export default function NavBar() {
   }, []);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "instant" });
+    setScrolled(false);
     setMenuOpen(false);
   }, [location.pathname]);
 

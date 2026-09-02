@@ -40,7 +40,7 @@ export default function ContactPage() {
             <span className="section-eyebrow">Contact</span>
             <h1 className="section-title">Partner with us or inquire about our products</h1>
             <p className="section-sub">
-              Whether you're a distributor, healthcare professional, or institution —
+              Whether you're a distributor, healthcare professional, or institution,
               our team is ready to help. Distributor and career inquiries are welcome too.
             </p>
           </Reveal>

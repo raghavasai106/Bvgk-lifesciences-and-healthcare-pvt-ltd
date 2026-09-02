@@ -41,14 +41,16 @@ const products = [
 
 const pipeline = [
   {
-    icon: "🍽️",
+    image: "/myovhe-hp.jpeg",
+    brand: "MYOVHE HP",
     name: "Critical Care Nutrition",
-    desc: "Clinical nutrition support for critically ill patients in intensive and post-surgical care."
+    desc: "High-protein, calorie-dense nutritional support for critically ill patients in intensive and post-surgical care."
   },
   {
-    icon: "🧬",
+    image: "/myovhe-onco.jpeg",
+    brand: "MYOVHE ONCO",
     name: "Oncology Nutrition",
-    desc: "Nutrition support designed to complement chemotherapy and long-term oncology recovery."
+    desc: "Advanced nutritional support formulated on ESPEN oncology nutrition guidelines to complement chemotherapy and long-term oncology recovery."
   }
 ];
 
@@ -62,7 +64,7 @@ export default function ProductsPage() {
             <h1 className="section-title">Our Product Portfolio</h1>
             <p className="section-sub">
               Five WHO-GMP manufactured anti-infectives for critical care, covering severe and
-              multidrug-resistant bacterial infections. Composition and indication only —
+              multidrug-resistant bacterial infections. Composition and indication only;
               pricing is handled by our sales team.
             </p>
           </Reveal>
@@ -104,9 +106,14 @@ export default function ProductsPage() {
           <div className="why-grid">
             {pipeline.map((p, i) => (
               <Reveal key={p.name} delay={i * 100}>
-                <div className="why-card">
-                  <div className="why-icon">{p.icon}</div>
+                <div className="why-card pipeline-card">
+                  {p.image && (
+                    <div className="pipeline-img-wrap">
+                      <img src={p.image} alt={p.brand} />
+                    </div>
+                  )}
                   <h3>{p.name} <span className="chip" style={{ marginLeft: 8 }}>Coming Soon</span></h3>
+                  {p.brand && <p className="product-composition">{p.brand}</p>}
                   <p>{p.desc}</p>
                 </div>
               </Reveal>

@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
+import Faq from "../components/Faq";
 
 const stats = [
   { end: 5,  suffix: "+", label: "Products in Market" },
@@ -14,22 +15,49 @@ const divisions = [
     icon: "🦠",
     name: "Anti-Infectives & Critical Care",
     img: "/piron-guillaume-U4FyCp3-KzY-unsplash.jpg",
-    desc: "Our current portfolio — five injectable anti-infectives for severe and multidrug-resistant bacterial infections, trusted in ICU and hospital settings.",
+    desc: "Our current portfolio: five injectable anti-infectives for severe and multidrug-resistant bacterial infections, trusted in ICU and hospital settings.",
     to: "/products"
   },
   {
     icon: "🍽️",
     name: "Critical Care Nutrition",
     img: "/istockphoto-2261362906-1024x1024.jpg",
-    desc: "Launching soon — clinical nutrition support built for critically ill patients recovering in intensive and post-surgical care.",
+    desc: "Launching soon: clinical nutrition support built for critically ill patients recovering in intensive and post-surgical care.",
     to: "/services"
   },
   {
     icon: "🧬",
     name: "Oncology Nutrition",
     img: "/owen-beard-DK8jXx1B-1c-unsplash.jpg",
-    desc: "Launching soon — nutrition support designed to complement chemotherapy and long-term recovery for oncology patients.",
+    desc: "Launching soon: nutrition support designed to complement chemotherapy and long-term recovery for oncology patients.",
     to: "/services"
+  }
+];
+
+const faqs = [
+  {
+    q: "What does BVGK Lifesciences & Healthcare do?",
+    a: "BVGK is a WHO-GMP manufacturing-backed pharmaceutical company focused on critical care anti-infectives, with critical care and oncology clinical nutrition ranges launching soon. We serve hospitals through ethical, science-led engagement rather than volume-driven promotion."
+  },
+  {
+    q: "Which regions does BVGK currently serve?",
+    a: "We're active across Telangana, Andhra Pradesh, Karnataka, and Tamil Nadu through 10 distributor partners, with pan-India expansion underway."
+  },
+  {
+    q: "Is BVGK's manufacturing WHO-GMP certified?",
+    a: "Yes. Every product is manufactured through 4 WHO-GMP certified contract manufacturing partners located in Himachal Pradesh, Haryana, Gujarat, and Maharashtra."
+  },
+  {
+    q: "How can I become a BVGK distributor?",
+    a: "We look for partners with an established network and supply chain in their territory. In return, BVGK offers competitive margins and sales support. Visit our Become a Distributor page to get started."
+  },
+  {
+    q: "Does BVGK hire Medical Representatives?",
+    a: "Yes, we're actively hiring Medical Representatives across Telangana, Andhra Pradesh, Karnataka, and Tamil Nadu. Check our Careers page for current openings."
+  },
+  {
+    q: "How can hospitals or doctors get detailed prescribing information?",
+    a: "Reach out through our Contact page, and our team will respond with full product information, availability, and commercial terms."
   }
 ];
 
@@ -89,7 +117,7 @@ export default function HomePage() {
               Advancing Health, <span>Enriching Lives</span>
             </h1>
             <p className="hero-sub">
-              Delivering WHO-GMP manufactured anti-infective therapies for critical care —
+              Delivering WHO-GMP manufactured anti-infective therapies for critical care,
               with oncology and critical care nutrition ranges launching soon. Trusted by
               hospitals and distributors across South India.
             </p>
@@ -168,11 +196,50 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Regional Presence */}
+      <section className="page-frame">
+        <div className="page-container">
+          <div className="about-split">
+            <Reveal>
+              <span className="section-eyebrow">Where We Operate</span>
+              <h2 className="section-title">Regional Presence Across South India</h2>
+              <p style={{ color: "var(--text-body)", lineHeight: 1.78, marginTop: 16, marginBottom: 28 }}>
+                Headquartered in Secunderabad, Telangana, BVGK's portfolio is active across
+                Telangana, Andhra Pradesh, Karnataka, and Tamil Nadu through 10 distributor
+                partners, with pan-India expansion underway.
+              </p>
+              <Link className="btn btn-primary" to="/distributors">Become a Distributor</Link>
+            </Reveal>
+            <Reveal delay={150}>
+              <div className="map-wrap">
+                <img src="/india-coverage-map.svg" alt="Map of India highlighting BVGK's coverage across Telangana, Andhra Pradesh, Karnataka and Tamil Nadu" />
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="page-frame bg-section">
+        <div className="page-container">
+          <Reveal>
+            <span className="section-eyebrow">Frequently Asked</span>
+            <h2 className="section-title">Questions About BVGK</h2>
+            <p className="section-sub">
+              Answers to what hospitals, distributors, and prospective team members ask us most.
+            </p>
+          </Reveal>
+          <Reveal delay={100}>
+            <Faq items={faqs} />
+          </Reveal>
+        </div>
+      </section>
+
       {/* CTA Banner */}
       <section className="cta-banner">
         <Reveal>
           <h2>Ready to Partner with BVGK Lifesciences?</h2>
-          <p>Whether you're a distributor, hospital, or healthcare professional — let's connect and build something impactful.</p>
+          <p>Whether you're a distributor, hospital, or healthcare professional, let's connect and build something impactful.</p>
           <Link className="btn btn-primary" to="/contact">Get in Touch</Link>
         </Reveal>
       </section>

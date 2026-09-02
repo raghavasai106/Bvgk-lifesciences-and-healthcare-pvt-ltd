@@ -22,7 +22,7 @@ export default function DistributorsPage() {
             <h1 className="section-title">Become a BVGK Distributor</h1>
             <p className="section-sub">
               We're expanding our distributor network beyond Telangana, Andhra Pradesh,
-              Karnataka, and Tamil Nadu towards pan-India coverage — and we're looking for
+              Karnataka, and Tamil Nadu towards pan-India coverage, and we're looking for
               partners to grow with us.
             </p>
           </Reveal>
@@ -66,7 +66,7 @@ export default function DistributorsPage() {
       <section className="cta-banner">
         <Reveal>
           <h2>Ready to become a BVGK distributor?</h2>
-          <p>Send us your details and territory — our team will get back to you to discuss partnership terms.</p>
+          <p>Send us your details and territory, and our team will get back to you to discuss partnership terms.</p>
           <Link className="btn btn-primary" to="/contact">Submit Distributor Inquiry →</Link>
         </Reveal>
       </section>

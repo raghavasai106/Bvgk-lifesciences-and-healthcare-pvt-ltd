@@ -22,7 +22,7 @@ const divisions = [
     status: "Launching Soon",
     products: ["Clinical nutrition formulations", "ICU & post-surgical support"],
     description:
-      "A new range in development to support critically ill patients recovering in intensive and post-surgical care — extending BVGK's mission beyond anti-infectives into everyday clinical nutrition."
+      "A new range in development to support critically ill patients recovering in intensive and post-surgical care, extending BVGK's mission beyond anti-infectives into everyday clinical nutrition."
   },
   {
     icon: "🧬",

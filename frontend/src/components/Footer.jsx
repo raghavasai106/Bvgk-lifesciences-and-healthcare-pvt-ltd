@@ -21,9 +21,7 @@ export default function Footer() {
           <Link to="/contact">Inquire Now</Link>
         </div>
         <p className="footer-legal">
-          Drug License (Form 20B &amp; 21B): TG/HYD/2026-151214 &nbsp;·&nbsp;
-          GSTIN: 36AAOCB0928K1ZE &nbsp;·&nbsp;
-          CIN: U86100TS2025PTC206078
+          Drug License (Form 20B &amp; 21B): TG/HYD/2026-151214
         </p>
       </div>
     </footer>
