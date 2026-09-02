@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
 import Faq from "../components/Faq";
+import Icon from "../components/Icon";
 
 const stats = [
   { end: 5,  suffix: "+", label: "Products in Market" },
@@ -12,21 +13,21 @@ const stats = [
 
 const divisions = [
   {
-    icon: "🦠",
+    icon: "virus",
     name: "Anti-Infectives & Critical Care",
     img: "/piron-guillaume-U4FyCp3-KzY-unsplash.jpg",
     desc: "Our current portfolio: five injectable anti-infectives for severe and multidrug-resistant bacterial infections, trusted in ICU and hospital settings.",
     to: "/products"
   },
   {
-    icon: "🍽️",
+    icon: "nutrition",
     name: "Critical Care Nutrition",
     img: "/istockphoto-2261362906-1024x1024.jpg",
     desc: "Launching soon: clinical nutrition support built for critically ill patients recovering in intensive and post-surgical care.",
     to: "/services"
   },
   {
-    icon: "🧬",
+    icon: "dna",
     name: "Oncology Nutrition",
     img: "/owen-beard-DK8jXx1B-1c-unsplash.jpg",
     desc: "Launching soon: nutrition support designed to complement chemotherapy and long-term recovery for oncology patients.",
@@ -62,10 +63,10 @@ const faqs = [
 ];
 
 const reasons = [
-  { icon: "✅", title: "WHO-GMP Manufacturing",  desc: "Every product is manufactured through WHO-GMP certified contract manufacturing partners across Himachal Pradesh, Haryana, Gujarat, and Maharashtra." },
-  { icon: "🔬", title: "Rigorous Quality Checks", desc: "Analytical testing, stability studies, and documentation integrity are verified on every batch before it reaches a hospital shelf." },
-  { icon: "🚚", title: "Regional Supply Network", desc: "Active across Telangana, Andhra Pradesh, Karnataka, and Tamil Nadu through 10 distributor partners, with pan-India expansion underway." },
-  { icon: "🤝", title: "Clinical Leadership",     desc: "Guided by an infectious disease specialist with 20+ years of clinical practice and a leadership team with three decades in pharma sales and marketing." }
+  { icon: "shield-check", title: "WHO-GMP Manufacturing",  desc: "Every product is manufactured through WHO-GMP certified contract manufacturing partners across Himachal Pradesh, Haryana, Gujarat, and Maharashtra." },
+  { icon: "flask", title: "Rigorous Quality Checks", desc: "Analytical testing, stability studies, and documentation integrity are verified on every batch before it reaches a hospital shelf." },
+  { icon: "truck", title: "Regional Supply Network", desc: "Active across Telangana, Andhra Pradesh, Karnataka, and Tamil Nadu through 10 distributor partners, with pan-India expansion underway." },
+  { icon: "users", title: "Clinical Leadership",     desc: "Guided by an infectious disease specialist with 20+ years of clinical practice and a leadership team with three decades in pharma sales and marketing." }
 ];
 
 function StatCounter({ end, suffix, label }) {
@@ -164,7 +165,7 @@ export default function HomePage() {
                   <div className="division-card-img">
                     <img src={d.img} alt={d.name} />
                   </div>
-                  <div className="division-icon">{d.icon}</div>
+                  <div className="division-icon"><Icon name={d.icon} size={36} /></div>
                   <h3>{d.name}</h3>
                   <p>{d.desc}</p>
                   <Link to={d.to} className="card-link">Learn more →</Link>
@@ -186,7 +187,7 @@ export default function HomePage() {
             {reasons.map((r, i) => (
               <Reveal key={r.title} delay={i * 100}>
                 <div className="why-card">
-                  <div className="why-icon">{r.icon}</div>
+                  <div className="why-icon"><Icon name={r.icon} /></div>
                   <h3>{r.title}</h3>
                   <p>{r.desc}</p>
                 </div>

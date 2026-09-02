@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
+import Icon from "../components/Icon";
 
 const divisions = [
   {
-    icon: "🦠",
+    icon: "virus",
     title: "Anti-Infectives & Critical Care",
     img: "/piron-guillaume-U4FyCp3-KzY-unsplash.jpg",
     imgAlt: "Surgical team in operating theatre",
-    color: "#E8F7F0",
+    color: "#FCE8EF",
     status: "In Market",
     products: ["EMBLONAM", "ESBLIPERA", "BEVYMER", "TIGINYSE", "PITOBLI"],
     description:
       "Our current portfolio of five injectable anti-infectives for hospital and ICU settings, covering severe and multidrug-resistant bacterial infections. Every product is manufactured through WHO-GMP certified contract manufacturing partners."
   },
   {
-    icon: "🍽️",
+    icon: "nutrition",
     title: "Critical Care Nutrition",
     img: "/istockphoto-2261362906-1024x1024.jpg",
     imgAlt: "Clinical nutrition support",
@@ -25,7 +26,7 @@ const divisions = [
       "A new range in development to support critically ill patients recovering in intensive and post-surgical care, extending BVGK's mission beyond anti-infectives into everyday clinical nutrition."
   },
   {
-    icon: "🧬",
+    icon: "dna",
     title: "Oncology Nutrition",
     img: "/owen-beard-DK8jXx1B-1c-unsplash.jpg",
     imgAlt: "Medical imaging and radiology",
@@ -61,7 +62,7 @@ export default function ServicesPage() {
                 <div className="service-card">
                   <div className="service-card-img">
                     <img src={d.img} alt={d.imgAlt} />
-                    <div className="service-card-icon">{d.icon}</div>
+                    <div className="service-card-icon"><Icon name={d.icon} /></div>
                   </div>
                   <div className="service-card-body">
                     <span className="chip">{d.status}</span>
