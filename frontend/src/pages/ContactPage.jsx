@@ -1,14 +1,15 @@
 import { useState } from "react";
 import Reveal from "../components/Reveal";
+import Icon from "../components/Icon";
 import { sendContactMessage } from "../services/companyApi";
 
 const initialForm = { name: "", email: "", phone: "", message: "" };
 
 const contactDetails = [
-  { icon: "📞", label: "Phone", value: "+91 96764 83331 · +91 94401 13831" },
-  { icon: "📧", label: "Email", value: "info@bvgklifesciences.com" },
-  { icon: "🏢", label: "Registered Office", value: "12-13-485/5/1, Street No. 14, Nagajunar Nagar Colony, Tarnaka, Secunderabad – 500017, Telangana" },
-  { icon: "📦", label: "Other Office / Warehouse", value: "Plot 571, Category MIG, Adobe Anandam, Nalagandla, Lingampally, Serilingampally, K.V. Rangareddy – 500019, Telangana" }
+  { icon: "phone", label: "Phone", value: "+91 96764 83331 · +91 94401 13831" },
+  { icon: "mail", label: "Email", value: "info@bvgklifesciences.com" },
+  { icon: "building", label: "Registered Office", value: "12-13-485/5/1, Street No. 14, Nagajunar Nagar Colony, Tarnaka, Secunderabad – 500017, Telangana" },
+  { icon: "package", label: "Other Office / Warehouse", value: "Plot 571, Category MIG, Adobe Anandam, Nalagandla, Lingampally, Serilingampally, K.V. Rangareddy – 500019, Telangana" }
 ];
 
 export default function ContactPage() {
@@ -61,7 +62,7 @@ export default function ContactPage() {
                     padding: "20px", background: "var(--bg-light)",
                     borderRadius: "var(--radius-lg)", border: "1px solid var(--border)"
                   }}>
-                    <span style={{ fontSize: "1.4rem" }}>{c.icon}</span>
+                    <span style={{ color: "var(--primary)", flexShrink: 0 }}><Icon name={c.icon} size={22} /></span>
                     <div>
                       <p style={{ fontSize: "0.75rem", fontWeight: 700, color: "var(--primary)", textTransform: "uppercase", letterSpacing: "0.06em", marginBottom: 4 }}>{c.label}</p>
                       <p style={{ color: "var(--text-dark)", fontWeight: 500, lineHeight: 1.6 }}>{c.value}</p>
