@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Reveal from "../components/Reveal";
 import Icon from "../components/Icon";
+import Cta from "../components/Cta";
 import { sendContactMessage } from "../services/companyApi";
 
 const initialForm = { name: "", email: "", phone: "", message: "" };
@@ -91,9 +92,16 @@ export default function ContactPage() {
                   Message
                   <textarea name="message" value={form.message} onChange={updateField} placeholder="Tell us about your inquiry" rows={5} required />
                 </label>
-                <button className="btn btn-primary" type="submit" disabled={status.state === "loading"} style={{ justifySelf: "flex-start" }}>
-                  {status.state === "loading" ? "Sending..." : "Send Inquiry →"}
-                </button>
+                <Cta
+                  type="submit"
+                  variant="primary"
+                  disabled={status.state === "loading"}
+                  arrow={status.state !== "loading"}
+                  hint={status.state === "loading" ? null : "We'll respond within 24 hours"}
+                  style={{ justifySelf: "flex-start" }}
+                >
+                  {status.state === "loading" ? "Sending..." : "Send Inquiry"}
+                </Cta>
                 {status.state !== "idle" && <p className={`form-status ${status.state}`}>{status.message}</p>}
               </form>
             </Reveal>

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
+import Cta from "../components/Cta";
 
 const products = [
   {
@@ -126,7 +127,7 @@ export default function ProductsPage() {
         <Reveal>
           <h2>Looking for detailed prescribing information?</h2>
           <p>Reach out to our team for full product information, availability, and commercial terms.</p>
-          <Link className="btn btn-primary" to="/contact">Contact Us</Link>
+          <Cta to="/contact" variant="primary" hint="Request pricing & availability">Contact Us</Cta>
         </Reveal>
       </section>
     </>

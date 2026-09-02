@@ -1,4 +1,5 @@
 import Reveal from "../components/Reveal";
+import Cta from "../components/Cta";
 
 const territories = ["Telangana", "Andhra Pradesh", "Karnataka", "Tamil Nadu"];
 
@@ -53,9 +54,9 @@ export default function CareersPage() {
               or reach out through our contact form with the territory you're applying for.
             </p>
           </Reveal>
-          <a className="btn btn-primary" href="mailto:info@bvgklifesciences.com?subject=Medical%20Representative%20Application">
-            Email Your Application →
-          </a>
+          <Cta href="mailto:info@bvgklifesciences.com?subject=Medical%20Representative%20Application" variant="primary" arrow hint="Opens your email app">
+            Email Your Application
+          </Cta>
         </div>
       </section>
     </>

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
 import Icon from "../components/Icon";
+import Cta from "../components/Cta";
 
 const divisions = [
   {
@@ -79,13 +80,13 @@ export default function ServicesPage() {
                       </div>
                     </div>
                     {d.status === "In Market" ? (
-                      <Link to="/products" className="btn btn-outline" style={{ marginTop: 24, display: "inline-flex" }}>
-                        View Full Product List →
-                      </Link>
+                      <Cta to="/products" variant="outline" arrow hint="See composition & indications" style={{ marginTop: 24 }}>
+                        View Full Product List
+                      </Cta>
                     ) : (
-                      <Link to="/contact" className="btn btn-outline" style={{ marginTop: 24, display: "inline-flex" }}>
-                        Ask About This Launch →
-                      </Link>
+                      <Cta to="/contact" variant="outline" arrow hint="Get notified when it's available" style={{ marginTop: 24 }}>
+                        Ask About This Launch
+                      </Cta>
                     )}
                   </div>
                 </div>
@@ -99,7 +100,7 @@ export default function ServicesPage() {
         <Reveal>
           <h2>Looking for a specific product or division?</h2>
           <p>Reach out to our team and we'll connect you with the right product specialist.</p>
-          <Link className="btn btn-primary" to="/contact">Contact Us</Link>
+          <Cta to="/contact" variant="primary" hint="Talk to a product specialist">Contact Us</Cta>
         </Reveal>
       </section>
     </>
