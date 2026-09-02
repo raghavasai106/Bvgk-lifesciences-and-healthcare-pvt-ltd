@@ -50,8 +50,42 @@ img { max-width: 100%; display: block; }
   font-size: 0.95rem;
   cursor: pointer;
   border: 2px solid transparent;
-  transition: all 0.25s;
+  transition: transform 0.25s, box-shadow 0.25s, background 0.25s, color 0.25s, border-color 0.25s;
   white-space: nowrap;
+}
+.btn-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.btn-arrow {
+  display: inline-block;
+  transition: transform 0.25s;
+}
+.btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+.btn-hint {
+  display: block;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  font-size: 0.7rem;
+  font-weight: 500;
+  line-height: 1.5;
+  margin-top: 0;
+  transition: max-height 0.3s ease, opacity 0.25s ease, margin-top 0.3s ease;
+}
+.btn:hover .btn-hint,
+.btn:focus-visible .btn-hint {
+  max-height: 20px;
+  opacity: 0.82;
+  margin-top: 3px;
 }
 .btn-primary {
   background: var(--primary);
@@ -61,7 +95,7 @@ img { max-width: 100%; display: block; }
 .btn-primary:hover {
   background: var(--primary-dark);
   border-color: var(--primary-dark);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.03);
   box-shadow: 0 8px 24px rgba(0,135,90,0.3);
 }
 .btn-ghost {
@@ -72,7 +106,7 @@ img { max-width: 100%; display: block; }
 .btn-ghost:hover {
   background: rgba(255,255,255,0.15);
   border-color: white;
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.03);
 }
 .btn-outline {
   background: transparent;
@@ -82,7 +116,7 @@ img { max-width: 100%; display: block; }
 .btn-outline:hover {
   background: var(--primary);
   color: white;
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.03);
 }
 .btn:disabled {
   opacity: 0.6;

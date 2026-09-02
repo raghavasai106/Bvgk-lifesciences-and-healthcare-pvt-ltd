@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
 import Faq from "../components/Faq";
 import Icon from "../components/Icon";
+import Cta from "../components/Cta";
 
 const stats = [
   { end: 5,  suffix: "+", label: "Products in Market" },
@@ -123,8 +124,8 @@ export default function HomePage() {
               hospitals and distributors across South India.
             </p>
             <div className="hero-actions">
-              <Link className="btn btn-primary" to="/contact">Inquire Now</Link>
-              <Link className="btn btn-ghost" to="/products">View Products</Link>
+              <Cta to="/contact" variant="primary" hint="Get a response within 24 hours">Inquire Now</Cta>
+              <Cta to="/products" variant="ghost" hint="Browse our anti-infective portfolio">View Products</Cta>
             </div>
           </div>
           <div className="hero-img-wrap">
@@ -209,7 +210,7 @@ export default function HomePage() {
                 Telangana, Andhra Pradesh, Karnataka, and Tamil Nadu through 10 distributor
                 partners, with pan-India expansion underway.
               </p>
-              <Link className="btn btn-primary" to="/distributors">Become a Distributor</Link>
+              <Cta to="/distributors" variant="primary" hint="Join our growing partner network">Become a Distributor</Cta>
             </Reveal>
             <Reveal delay={150}>
               <div className="map-wrap">
@@ -241,7 +242,7 @@ export default function HomePage() {
         <Reveal>
           <h2>Ready to Partner with BVGK Lifesciences?</h2>
           <p>Whether you're a distributor, hospital, or healthcare professional, let's connect and build something impactful.</p>
-          <Link className="btn btn-primary" to="/contact">Get in Touch</Link>
+          <Cta to="/contact" variant="primary" hint="We typically reply within a day">Get in Touch</Cta>
         </Reveal>
       </section>
     </>

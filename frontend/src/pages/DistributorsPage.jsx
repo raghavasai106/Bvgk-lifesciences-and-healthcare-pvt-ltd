@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
+import Cta from "../components/Cta";
 
 const eligibility = [
   "An established distribution network in your territory",
@@ -67,7 +68,7 @@ export default function DistributorsPage() {
         <Reveal>
           <h2>Ready to become a BVGK distributor?</h2>
           <p>Send us your details and territory, and our team will get back to you to discuss partnership terms.</p>
-          <Link className="btn btn-primary" to="/contact">Submit Distributor Inquiry →</Link>
+          <Cta to="/contact" variant="primary" arrow hint="Tell us your territory & network">Submit Distributor Inquiry</Cta>
         </Reveal>
       </section>
     </>
