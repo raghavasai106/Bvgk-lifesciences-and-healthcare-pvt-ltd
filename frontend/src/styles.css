@@ -1,27 +1,27 @@
 /* ================================
-   ROOT — Royal Green Design System
+   ROOT — Teal & Magenta Design System
    ================================ */
 :root {
-  --primary:        #00875A;
-  --primary-dark:   #006644;
-  --primary-deeper: #004433;
-  --primary-mid:    #00A86B;
-  --primary-light:  #E8F7F0;
-  --primary-xlight: #F4FAF7;
+  --primary:        #D6145A;
+  --primary-dark:   #B10E48;
+  --primary-deeper: #01373D;
+  --primary-mid:    #F0195F;
+  --primary-light:  #FCE8EF;
+  --primary-xlight: #F7FAFA;
   --accent:         #C8973A;
   --accent-light:   #FDF5E6;
   --text-dark:      #111827;
   --text-body:      #374151;
   --muted:          #6B7280;
   --bg-white:       #ffffff;
-  --bg-light:       #F4FAF7;
-  --bg-section:     #EEF8F2;
-  --border:         #C8E6D8;
+  --bg-light:       #F7FAFA;
+  --bg-section:     #EFF6F5;
+  --border:         #D9E7E6;
   --radius:         10px;
   --radius-lg:      20px;
   --shadow:         0 4px 16px rgba(0,0,0,0.06);
-  --shadow-card:    0 8px 32px rgba(0,135,90,0.08);
-  --shadow-hover:   0 20px 60px rgba(0,135,90,0.16);
+  --shadow-card:    0 8px 32px rgba(214,20,90,0.08);
+  --shadow-hover:   0 20px 60px rgba(214,20,90,0.16);
   --nav-h:          72px;
 }
 
@@ -62,7 +62,7 @@ img { max-width: 100%; display: block; }
   background: var(--primary-dark);
   border-color: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0,135,90,0.3);
+  box-shadow: 0 8px 24px rgba(214,20,90,0.3);
 }
 .btn-ghost {
   background: transparent;
@@ -252,7 +252,7 @@ img { max-width: 100%; display: block; }
   padding-left: 5%;
   padding-right: 5%;
   min-height: 90vh;
-  background: linear-gradient(140deg, #003526 0%, #005A3D 35%, #007A50 70%, #009B65 100%);
+  background: linear-gradient(140deg, #01252A 0%, #01373D 35%, #0B4A52 70%, #156670 100%);
   display: flex;
   align-items: center;
   position: relative;
@@ -361,7 +361,7 @@ img { max-width: 100%; display: block; }
   line-height: 1;
   margin-bottom: 10px;
 }
-.stat-number em { color: #7FDFB0; font-style: normal; }
+.stat-number em { color: #FF8FB8; font-style: normal; }
 .stat-label {
   display: block;
   color: rgba(255,255,255,0.55);
@@ -515,7 +515,7 @@ img { max-width: 100%; display: block; }
    CTA BANNER
    ================================ */
 .cta-banner {
-  background: linear-gradient(135deg, #005A3D, #007A50);
+  background: linear-gradient(135deg, #01373D, #0B4A52);
   padding: 88px 5%;
   text-align: center;
 }
@@ -549,11 +549,11 @@ img { max-width: 100%; display: block; }
    INNER PAGE HEADER
    ================================ */
 .inner-hero {
-  background: linear-gradient(135deg, #004433, #006644);
+  background: linear-gradient(135deg, #01373D, #0B4A52);
   margin-top: calc(-1 * var(--nav-h));
   padding: calc(var(--nav-h) + 80px) 5% 64px;
 }
-.inner-hero .section-eyebrow { color: #7FDFB0; }
+.inner-hero .section-eyebrow { color: #FF8FB8; }
 .inner-hero .section-title   { color: white; }
 .inner-hero .section-sub     { color: rgba(255,255,255,0.75); margin-bottom: 0; }
 
@@ -753,7 +753,7 @@ img { max-width: 100%; display: block; }
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(0,135,90,0.1);
+  box-shadow: 0 0 0 3px rgba(214,20,90,0.1);
 }
 .form-status          { margin: 0; font-size: 0.92rem; }
 .form-status.success  { color: var(--primary); }
@@ -863,7 +863,7 @@ img { max-width: 100%; display: block; }
 .admin-login-form input:focus {
   outline: none;
   border-color: var(--primary);
-  box-shadow: 0 0 0 3px rgba(0,135,90,0.1);
+  box-shadow: 0 0 0 3px rgba(214,20,90,0.1);
 }
 .password-field {
   position: relative;
@@ -971,7 +971,7 @@ img { max-width: 100%; display: block; }
   position: absolute;
   bottom: 24px;
   left: 24px;
-  background: rgba(0,68,51,0.92);
+  background: rgba(1,55,61,0.92);
   backdrop-filter: blur(8px);
   border: 1px solid rgba(255,255,255,0.15);
   border-radius: 14px;
@@ -988,7 +988,7 @@ img { max-width: 100%; display: block; }
   font-family: 'Poppins', sans-serif;
   font-size: 1.8rem;
   font-weight: 800;
-  color: #7FDFB0;
+  color: #FF8FB8;
   line-height: 1;
 }
 
@@ -1060,7 +1060,7 @@ img { max-width: 100%; display: block; }
 }
 .product-tag {
   padding: 6px 14px;
-  background: rgba(0,135,90,0.1);
+  background: rgba(214,20,90,0.1);
   color: var(--primary-dark);
   border-radius: 100px;
   font-size: 0.8rem;

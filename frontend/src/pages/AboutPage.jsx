@@ -21,35 +21,35 @@ const team = [
     credentials: "MBBS, DA, IDCCM, EDIC, MBA (Hospital Administration)",
     bio: "A Critical Care Consultant and ICU administrator with expertise spanning sepsis and septic shock management, mechanical ventilation, antimicrobial stewardship, and critical care nutrition. As Director and Clinical Advisor, he provides the clinical and scientific grounding behind BVGK's anti-infective and nutrition portfolio.",
     initials: "BV",
-    color: "#004433"
+    color: "#01373D"
   },
   {
     name: "Addagulla Ramakrishna",
     role: "Director",
     bio: "Three decades of experience in pharmaceutical industry sales and marketing, training and development, anchoring BVGK's commercial and distribution strategy.",
     initials: "AR",
-    color: "#006644"
+    color: "#0B4A52"
   },
   {
     name: "Kowlasker Madhavi Sudha",
     role: "Director",
     bio: null,
     initials: "KM",
-    color: "#00875A"
+    color: "#156670"
   },
   {
     name: "Manchana Sravanthi",
     role: "Director",
     bio: null,
     initials: "MS",
-    color: "#00A86B"
+    color: "#B10E48"
   },
   {
     name: "Ganesh Kowlasker",
     role: "General Manager, Sales & Marketing",
     bio: "32 years in pharmaceutical sales and business development, from Medical Sales Representative to Assistant General Manager across UCB Pharma, Mylan and Viatris, including building Mylan's HIV Care division from the ground up and growing the Syntocinon brand to over 60% market share. Leads BVGK's sales and marketing strategy.",
     initials: "GK",
-    color: "#00BF8F"
+    color: "#D6145A"
   }
 ];
 
