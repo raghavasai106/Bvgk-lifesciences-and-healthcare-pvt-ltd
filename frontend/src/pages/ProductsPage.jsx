@@ -8,7 +8,7 @@ const products = [
     composition: "Aztreonam 1500 mg + Avibactam 500 mg",
     form: "Vial",
     packSize: "Single Vial",
-    indication: "Severe or multidrug-resistant bacterial infections"
+    indication: "Severe or multidrug resistant bacterial infections"
   },
   {
     brand: "ESBLIPERA",
@@ -22,14 +22,14 @@ const products = [
     composition: "Meropenem 1 g",
     form: "Vial",
     packSize: "Single Vial",
-    indication: "Severe or multidrug-resistant bacterial infections"
+    indication: "Severe or multidrug resistant bacterial infections"
   },
   {
     brand: "TIGINYSE",
     composition: "Tigecycline 50 mg",
     form: "Vial",
     packSize: "Single Vial",
-    indication: "Complicated skin & skin-structure infections, complicated intra-abdominal infections, community-acquired bacterial pneumonia"
+    indication: "Complicated skin & skin structure infections, complicated intra abdominal infections, community acquired bacterial pneumonia"
   },
   {
     brand: "PITOBLI",
@@ -45,13 +45,13 @@ const pipeline = [
     image: "/myovhe-hp.jpeg",
     brand: "MYOVHE HP",
     name: "Critical Care Nutrition",
-    desc: "High-protein, calorie-dense nutritional support for critically ill patients in intensive and post-surgical care."
+    desc: "High protein, calorie dense nutritional support for critically ill patients in intensive and post surgical care."
   },
   {
     image: "/myovhe-onco.jpeg",
     brand: "MYOVHE ONCO",
     name: "Oncology Nutrition",
-    desc: "Advanced nutritional support formulated on ESPEN oncology nutrition guidelines to complement chemotherapy and long-term oncology recovery."
+    desc: "Advanced nutritional support formulated on ESPEN oncology nutrition guidelines to complement chemotherapy and long term oncology recovery."
   }
 ];
 
@@ -59,13 +59,15 @@ export default function ProductsPage() {
   return (
     <>
       <section className="inner-hero">
+        <div className="inner-hero-bg" style={{ backgroundImage: "url(/myovhe-hp.jpeg)" }} />
+        <div className="inner-hero-overlay" />
         <div className="page-container">
           <Reveal>
             <span className="section-eyebrow">Products</span>
             <h1 className="section-title">Our Product Portfolio</h1>
             <p className="section-sub">
-              Five WHO-GMP manufactured anti-infectives for critical care, covering severe and
-              multidrug-resistant bacterial infections. Composition and indication only;
+              Five WHO GMP manufactured anti infectives for critical care, covering severe and
+              multidrug resistant bacterial infections. Composition and indication only;
               pricing is handled by our sales team.
             </p>
           </Reveal>
@@ -101,7 +103,7 @@ export default function ProductsPage() {
             <h2 className="section-title">Launching Soon</h2>
             <p className="section-sub">
               Two new ranges are in the pipeline, expanding BVGK's portfolio beyond
-              anti-infectives into clinical nutrition.
+              anti infectives into clinical nutrition.
             </p>
           </Reveal>
           <div className="why-grid">

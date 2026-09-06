@@ -7,12 +7,14 @@ export default function CareersPage() {
   return (
     <>
       <section className="inner-hero">
+        <div className="inner-hero-bg" style={{ backgroundImage: "url(/istockphoto-2215511952-1024x1024.jpg)" }} />
+        <div className="inner-hero-overlay" />
         <div className="page-container">
           <Reveal>
             <span className="section-eyebrow">Careers</span>
             <h1 className="section-title">Build your career with BVGK</h1>
             <p className="section-sub">
-              We're hiring Medical Representatives to help grow our anti-infective and
+              We're hiring Medical Representatives to help grow our anti infective and
               upcoming clinical nutrition portfolio across South India.
             </p>
           </Reveal>
@@ -27,7 +29,7 @@ export default function CareersPage() {
                 <span className="chip">Now Hiring</span>
                 <h2 style={{ marginTop: 12 }}>Medical Representative</h2>
                 <p style={{ marginTop: 8 }}>
-                  Field-based role promoting BVGK's anti-infective portfolio to hospitals
+                  Field based role promoting BVGK's anti infective portfolio to hospitals
                   and healthcare professionals.
                 </p>
                 <div className="product-meta">

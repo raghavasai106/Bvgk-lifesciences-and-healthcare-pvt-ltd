@@ -10,8 +10,8 @@ const values = [
 const registry = [
   { label: "Founded",         text: "2026, BVGK Lifesciences & Healthcare Pvt Ltd, Secunderabad, Telangana" },
   { label: "Drug License",    text: "Form 20B & Form 21B: TG/HYD/2026-151214" },
-  { label: "Manufacturing",   text: "4 WHO-GMP certified CMOs across Himachal Pradesh, Haryana, Gujarat & Maharashtra" },
-  { label: "Coverage",        text: "Telangana, Andhra Pradesh, Karnataka & Tamil Nadu, expanding pan-India" }
+  { label: "Manufacturing",   text: "4 WHO GMP certified CMOs across Himachal Pradesh, Haryana, Gujarat & Maharashtra" },
+  { label: "Coverage",        text: "Telangana, Andhra Pradesh, Karnataka & Tamil Nadu, expanding pan India" }
 ];
 
 const team = [
@@ -19,7 +19,7 @@ const team = [
     name: "Dr. Bollepalli Vishnu Vardhana Raju",
     role: "Director & Clinical Advisor",
     credentials: "MBBS, DA, IDCCM, EDIC, MBA (Hospital Administration)",
-    bio: "A Critical Care Consultant and ICU administrator with expertise spanning sepsis and septic shock management, mechanical ventilation, antimicrobial stewardship, and critical care nutrition. As Director and Clinical Advisor, he provides the clinical and scientific grounding behind BVGK's anti-infective and nutrition portfolio.",
+    bio: "A Critical Care Consultant and ICU administrator with expertise spanning sepsis and septic shock management, mechanical ventilation, antimicrobial stewardship, and critical care nutrition. As Director and Clinical Advisor, he provides the clinical and scientific grounding behind BVGK's anti infective and nutrition portfolio.",
     initials: "BV",
     color: "#01373D"
   },
@@ -57,13 +57,15 @@ export default function AboutPage() {
   return (
     <>
       <section className="inner-hero">
+        <div className="inner-hero-bg" style={{ backgroundImage: "url(/bvgk_pharma.jpeg)" }} />
+        <div className="inner-hero-overlay" />
         <div className="page-container">
           <Reveal>
             <span className="section-eyebrow">About Us</span>
             <h1 className="section-title">Pharmaceutical excellence across critical therapies</h1>
             <p className="section-sub">
               BVGK Lifesciences and Healthcare Pvt Ltd is a pharmaceutical company bringing
-              WHO-GMP manufactured anti-infective therapies to hospitals across South India.
+              WHO GMP manufactured anti infective therapies to hospitals across South India.
             </p>
           </Reveal>
         </div>
@@ -80,12 +82,12 @@ export default function AboutPage() {
             </Reveal>
             <Reveal delay={150}>
               <span className="section-eyebrow">Who we are</span>
-              <h2 className="section-title">A purpose-driven pharma company</h2>
+              <h2 className="section-title">A pharma company built on purpose</h2>
               <p style={{ color: "var(--text-body)", lineHeight: 1.78, marginBottom: 16 }}>
                 BVGK Lifesciences &amp; Healthcare envisions a future where every critically ill
-                patient has access to high-quality, affordable therapies and clinical nutrition
-                support. Today our portfolio of five anti-infective products serves severe and
-                multidrug-resistant bacterial infections in critical care settings, with critical
+                patient has access to high quality, affordable therapies and clinical nutrition
+                support. Today our portfolio of five anti infective products serves severe and
+                multidrug resistant bacterial infections in critical care settings, with critical
                 care and oncology nutrition ranges launching soon.
               </p>
               <p style={{ color: "var(--muted)", lineHeight: 1.78 }}>
@@ -140,7 +142,15 @@ export default function AboutPage() {
                     <h3>{m.name}</h3>
                     <span className="team-role">{m.role}</span>
                     {m.credentials && <span className="team-credentials">{m.credentials}</span>}
-                    {m.bio && <p>{m.bio}</p>}
+                    {m.bio && (
+                      <details className="team-bio">
+                        <summary className="team-bio-toggle">
+                          <span>Read full bio</span>
+                          <span className="faq-chevron" aria-hidden="true">⌄</span>
+                        </summary>
+                        <p>{m.bio}</p>
+                      </details>
+                    )}
                   </div>
                 </div>
               </Reveal>

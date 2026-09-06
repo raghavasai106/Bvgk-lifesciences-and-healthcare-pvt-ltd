@@ -9,8 +9,8 @@ const initialForm = { name: "", email: "", phone: "", message: "" };
 const contactDetails = [
   { icon: "phone", label: "Phone", value: "+91 96764 83331 · +91 94401 13831" },
   { icon: "mail", label: "Email", value: "info@bvgklifesciences.com" },
-  { icon: "building", label: "Registered Office", value: "12-13-485/5/1, Street No. 14, Nagajunar Nagar Colony, Tarnaka, Secunderabad – 500017, Telangana" },
-  { icon: "package", label: "Other Office / Warehouse", value: "Plot 571, Category MIG, Adobe Anandam, Nalagandla, Lingampally, Serilingampally, K.V. Rangareddy – 500019, Telangana" }
+  { icon: "building", label: "Registered Office", value: "12-13-485/5/1, Street No. 14, Nagajunar Nagar Colony, Tarnaka, Secunderabad, 500017, Telangana" },
+  { icon: "package", label: "Other Office / Warehouse", value: "Plot 571, Category MIG, Adobe Anandam, Nalagandla, Lingampally, Serilingampally, K.V. Rangareddy, 500019, Telangana" }
 ];
 
 export default function ContactPage() {
@@ -37,6 +37,8 @@ export default function ContactPage() {
   return (
     <>
       <section className="inner-hero">
+        <div className="inner-hero-bg" style={{ backgroundImage: "url(/istockphoto-2227757715-1024x1024.jpg)" }} />
+        <div className="inner-hero-overlay" />
         <div className="page-container">
           <Reveal>
             <span className="section-eyebrow">Contact</span>

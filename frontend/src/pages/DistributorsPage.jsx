@@ -4,26 +4,28 @@ import Cta from "../components/Cta";
 
 const eligibility = [
   "An established distribution network in your territory",
-  "A reliable, well-managed supply chain"
+  "A reliable, well managed supply chain"
 ];
 
 const offerings = [
   "Competitive margins",
   "Dedicated sales & marketing support",
-  "Access to a growing anti-infective and clinical nutrition portfolio"
+  "Access to a growing anti infective and clinical nutrition portfolio"
 ];
 
 export default function DistributorsPage() {
   return (
     <>
       <section className="inner-hero">
+        <div className="inner-hero-bg" style={{ backgroundImage: "url(/nappy-J5UTvRgse7Q-unsplash.jpg)" }} />
+        <div className="inner-hero-overlay" />
         <div className="page-container">
           <Reveal>
             <span className="section-eyebrow">Partner With Us</span>
             <h1 className="section-title">Become a BVGK Distributor</h1>
             <p className="section-sub">
               We're expanding our distributor network beyond Telangana, Andhra Pradesh,
-              Karnataka, and Tamil Nadu towards pan-India coverage, and we're looking for
+              Karnataka, and Tamil Nadu towards pan India coverage, and we're looking for
               partners to grow with us.
             </p>
           </Reveal>
@@ -58,7 +60,7 @@ export default function DistributorsPage() {
             <h2 className="section-title">10 distributor partners, and growing</h2>
             <p className="section-sub">
               We currently work with 10 distributors across Telangana, Andhra Pradesh,
-              Karnataka, and Tamil Nadu, with active plans to expand pan-India.
+              Karnataka, and Tamil Nadu, with active plans to expand pan India.
             </p>
           </Reveal>
         </div>

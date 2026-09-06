@@ -6,14 +6,14 @@ import Cta from "../components/Cta";
 const divisions = [
   {
     icon: "virus",
-    title: "Anti-Infectives & Critical Care",
+    title: "Anti Infectives & Critical Care",
     img: "/piron-guillaume-U4FyCp3-KzY-unsplash.jpg",
     imgAlt: "Surgical team in operating theatre",
     color: "#FCE8EF",
     status: "In Market",
     products: ["EMBLONAM", "ESBLIPERA", "BEVYMER", "TIGINYSE", "PITOBLI"],
     description:
-      "Our current portfolio of five injectable anti-infectives for hospital and ICU settings, covering severe and multidrug-resistant bacterial infections. Every product is manufactured through WHO-GMP certified contract manufacturing partners."
+      "Our current portfolio of five injectable anti infectives for hospital and ICU settings, covering severe and multidrug resistant bacterial infections. Every product is manufactured through WHO GMP certified contract manufacturing partners."
   },
   {
     icon: "nutrition",
@@ -22,9 +22,9 @@ const divisions = [
     imgAlt: "Clinical nutrition support",
     color: "#FDF5E6",
     status: "Launching Soon",
-    products: ["Clinical nutrition formulations", "ICU & post-surgical support"],
+    products: ["Clinical nutrition formulations", "ICU & post surgical support"],
     description:
-      "A new range in development to support critically ill patients recovering in intensive and post-surgical care, extending BVGK's mission beyond anti-infectives into everyday clinical nutrition."
+      "A new range in development to support critically ill patients recovering in intensive and post surgical care, extending BVGK's mission beyond anti infectives into everyday clinical nutrition."
   },
   {
     icon: "dna",
@@ -33,9 +33,9 @@ const divisions = [
     imgAlt: "Medical imaging and radiology",
     color: "#EEF3FA",
     status: "Launching Soon",
-    products: ["Nutrition support for chemotherapy", "Long-term recovery support"],
+    products: ["Nutrition support for chemotherapy", "Long term recovery support"],
     description:
-      "A nutrition range designed to complement chemotherapy and support long-term recovery for oncology patients, currently in development ahead of launch."
+      "A nutrition range designed to complement chemotherapy and support long term recovery for oncology patients, currently in development ahead of launch."
   }
 ];
 
@@ -43,12 +43,14 @@ export default function ServicesPage() {
   return (
     <>
       <section className="inner-hero">
+        <div className="inner-hero-bg" style={{ backgroundImage: "url(/owen-beard-DK8jXx1B-1c-unsplash.jpg)" }} />
+        <div className="inner-hero-overlay" />
         <div className="page-container">
           <Reveal>
             <span className="section-eyebrow">Divisions</span>
             <h1 className="section-title">Three Divisions. One Standard of Quality.</h1>
             <p className="section-sub">
-              BVGK Lifesciences operates in Anti-Infectives &amp; Critical Care today, with
+              BVGK Lifesciences operates in Anti Infectives &amp; Critical Care today, with
               Critical Care Nutrition and Oncology Nutrition ranges launching soon.
             </p>
           </Reveal>

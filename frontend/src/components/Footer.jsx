@@ -6,9 +6,9 @@ export default function Footer() {
       <div className="footer-inner">
         <p>BVGK Lifesciences and Healthcare Pvt Ltd</p>
         <p className="footer-copy">
-          Anti-infective critical care therapies for hospitals across South India, with
+          Anti infective critical care therapies for hospitals across South India, with
           oncology and critical care nutrition ranges launching soon. Manufactured through
-          WHO-GMP certified partners.
+          WHO GMP certified partners.
         </p>
         <div className="footer-contact">
           <a href="tel:+919676483331">📞 96764 83331</a>
