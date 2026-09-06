@@ -6,32 +6,36 @@ import Icon from "../components/Icon";
 import Cta from "../components/Cta";
 
 const stats = [
-  { end: 5,  suffix: "+", label: "Products in Market" },
-  { end: 3,  suffix: "",  label: "Therapeutic Divisions" },
-  { end: 10, suffix: "+", label: "Distributor Partners" },
-  { end: 4,  suffix: "",  label: "States Covered" }
+  { end: 5,  suffix: "+", label: "Products in Market",   variant: "pink",
+    hint: "Five injectable anti infectives, in active use across hospital and ICU settings" },
+  { end: 3,  suffix: "",  label: "Therapeutic Divisions", variant: "teal",
+    hint: "Anti infectives today, with critical care and oncology nutrition launching soon" },
+  { end: 10, suffix: "+", label: "Distributor Partners",  variant: "mint",
+    hint: "Active across Telangana, Andhra Pradesh, Karnataka and Tamil Nadu" },
+  { end: 4,  suffix: "",  label: "States Covered",        variant: "blush",
+    hint: "Expanding from a South India base towards pan India coverage" }
 ];
 
 const divisions = [
   {
-    icon: "virus",
-    name: "Anti-Infectives & Critical Care",
+    name: "Anti Infectives & Critical Care",
     img: "/piron-guillaume-U4FyCp3-KzY-unsplash.jpg",
-    desc: "Our current portfolio: five injectable anti-infectives for severe and multidrug-resistant bacterial infections, trusted in ICU and hospital settings.",
+    status: "In Market",
+    tag: "5 Products",
     to: "/products"
   },
   {
-    icon: "nutrition",
     name: "Critical Care Nutrition",
     img: "/istockphoto-2261362906-1024x1024.jpg",
-    desc: "Launching soon: clinical nutrition support built for critically ill patients recovering in intensive and post-surgical care.",
+    status: "Launching Soon",
+    tag: "MYOVHE HP",
     to: "/services"
   },
   {
-    icon: "dna",
     name: "Oncology Nutrition",
     img: "/owen-beard-DK8jXx1B-1c-unsplash.jpg",
-    desc: "Launching soon: nutrition support designed to complement chemotherapy and long-term recovery for oncology patients.",
+    status: "Launching Soon",
+    tag: "MYOVHE ONCO",
     to: "/services"
   }
 ];
@@ -39,15 +43,15 @@ const divisions = [
 const faqs = [
   {
     q: "What does BVGK Lifesciences & Healthcare do?",
-    a: "BVGK is a WHO-GMP manufacturing-backed pharmaceutical company focused on critical care anti-infectives, with critical care and oncology clinical nutrition ranges launching soon. We serve hospitals through ethical, science-led engagement rather than volume-driven promotion."
+    a: "BVGK is a pharmaceutical company backed by WHO GMP manufacturing, focused on critical care anti infectives, with critical care and oncology clinical nutrition ranges launching soon. We serve hospitals through ethical engagement grounded in science, not promotion based on sales volume."
   },
   {
     q: "Which regions does BVGK currently serve?",
-    a: "We're active across Telangana, Andhra Pradesh, Karnataka, and Tamil Nadu through 10 distributor partners, with pan-India expansion underway."
+    a: "We're active across Telangana, Andhra Pradesh, Karnataka, and Tamil Nadu through 10 distributor partners, with pan India expansion underway."
   },
   {
-    q: "Is BVGK's manufacturing WHO-GMP certified?",
-    a: "Yes. Every product is manufactured through 4 WHO-GMP certified contract manufacturing partners located in Himachal Pradesh, Haryana, Gujarat, and Maharashtra."
+    q: "Is BVGK's manufacturing WHO GMP certified?",
+    a: "Yes. Every product is manufactured through 4 WHO GMP certified contract manufacturing partners located in Himachal Pradesh, Haryana, Gujarat, and Maharashtra."
   },
   {
     q: "How can I become a BVGK distributor?",
@@ -64,13 +68,13 @@ const faqs = [
 ];
 
 const reasons = [
-  { icon: "shield-check", title: "WHO-GMP Manufacturing",  desc: "Every product is manufactured through WHO-GMP certified contract manufacturing partners across Himachal Pradesh, Haryana, Gujarat, and Maharashtra." },
+  { icon: "shield-check", title: "WHO GMP Manufacturing",  desc: "Every product is manufactured through WHO GMP certified contract manufacturing partners across Himachal Pradesh, Haryana, Gujarat, and Maharashtra." },
   { icon: "flask", title: "Rigorous Quality Checks", desc: "Analytical testing, stability studies, and documentation integrity are verified on every batch before it reaches a hospital shelf." },
-  { icon: "truck", title: "Regional Supply Network", desc: "Active across Telangana, Andhra Pradesh, Karnataka, and Tamil Nadu through 10 distributor partners, with pan-India expansion underway." },
+  { icon: "truck", title: "Regional Supply Network", desc: "Active across Telangana, Andhra Pradesh, Karnataka, and Tamil Nadu through 10 distributor partners, with pan India expansion underway." },
   { icon: "users", title: "Clinical Leadership",     desc: "Guided by an infectious disease specialist with 20+ years of clinical practice and a leadership team with three decades in pharma sales and marketing." }
 ];
 
-function StatCounter({ end, suffix, label }) {
+function StatCounter({ end, suffix, label, variant, hint }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
   const started = useRef(false);
@@ -97,9 +101,10 @@ function StatCounter({ end, suffix, label }) {
   }, [end]);
 
   return (
-    <div className="stat-item" ref={ref}>
-      <span className="stat-number"><em>{count}</em>{suffix}</span>
-      <span className="stat-label">{label}</span>
+    <div className={`stat-card stat-card-${variant}`} ref={ref} tabIndex={0}>
+      <span className="stat-card-number"><em>{count}</em>{suffix}</span>
+      <span className="stat-card-label">{label}</span>
+      {hint && <span className="stat-card-hint">{hint}</span>}
     </div>
   );
 }
@@ -119,13 +124,13 @@ export default function HomePage() {
               Advancing Health, <span>Enriching Lives</span>
             </h1>
             <p className="hero-sub">
-              Delivering WHO-GMP manufactured anti-infective therapies for critical care,
+              Delivering WHO GMP manufactured anti infective therapies for critical care,
               with oncology and critical care nutrition ranges launching soon. Trusted by
               hospitals and distributors across South India.
             </p>
             <div className="hero-actions">
               <Cta to="/contact" variant="primary" hint="Get a response within 24 hours">Inquire Now</Cta>
-              <Cta to="/products" variant="ghost" hint="Browse our anti-infective portfolio">View Products</Cta>
+              <Cta to="/products" variant="ghost" hint="Browse our anti infective portfolio">View Products</Cta>
             </div>
           </div>
           <div className="hero-img-wrap">
@@ -135,15 +140,23 @@ export default function HomePage() {
             />
             <div className="hero-img-badge">
               <span className="hero-img-badge-num">4</span>
-              <span>WHO-GMP Certified<br/>Manufacturing Partners</span>
+              <span>WHO GMP Certified<br/>Manufacturing Partners</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Stats bar */}
-      <section className="stats-bar">
-        <div className="stats-inner">
+      {/* Stats strip — floats over the hero */}
+      <section className="stats-strip">
+        <div className="stats-strip-inner">
+          <div className="stat-card stat-card-photo" tabIndex={0}>
+            <img src="/istockphoto-2215511952-1024x1024.jpg" alt="WHO GMP certified manufacturing" />
+            <div className="stat-card-photo-caption">
+              <span className="stat-card-tag">Quality</span>
+              <span>WHO GMP certified manufacturing</span>
+              <span className="stat-card-hint">Analytical testing and stability studies verified on every batch</span>
+            </div>
+          </div>
           {stats.map(s => <StatCounter key={s.label} {...s} />)}
         </div>
       </section>
@@ -155,7 +168,7 @@ export default function HomePage() {
             <span className="section-eyebrow">What we do</span>
             <h2 className="section-title">Three Divisions. One Standard of Quality.</h2>
             <p className="section-sub">
-              A focused anti-infectives portfolio in market today, with critical care
+              A focused anti infectives portfolio in market today, with critical care
               and oncology nutrition ranges in active development.
             </p>
           </Reveal>
@@ -163,13 +176,14 @@ export default function HomePage() {
             {divisions.map((d, i) => (
               <Reveal key={d.name} delay={i * 120}>
                 <div className="division-card">
-                  <div className="division-card-img">
-                    <img src={d.img} alt={d.name} />
+                  <img className="division-card-bg" src={d.img} alt={d.name} />
+                  <div className="division-card-overlay" />
+                  <span className="division-card-status">{d.status}</span>
+                  <div className="division-card-content">
+                    <span className="division-card-tag">{d.tag}</span>
+                    <h3>{d.name}</h3>
+                    <Link to={d.to} className="card-link">Learn more →</Link>
                   </div>
-                  <div className="division-icon"><Icon name={d.icon} size={36} /></div>
-                  <h3>{d.name}</h3>
-                  <p>{d.desc}</p>
-                  <Link to={d.to} className="card-link">Learn more →</Link>
                 </div>
               </Reveal>
             ))}
@@ -208,7 +222,7 @@ export default function HomePage() {
               <p style={{ color: "var(--text-body)", lineHeight: 1.78, marginTop: 16, marginBottom: 28 }}>
                 Headquartered in Secunderabad, Telangana, BVGK's portfolio is active across
                 Telangana, Andhra Pradesh, Karnataka, and Tamil Nadu through 10 distributor
-                partners, with pan-India expansion underway.
+                partners, with pan India expansion underway.
               </p>
               <Cta to="/distributors" variant="primary" hint="Join our growing partner network">Become a Distributor</Cta>
             </Reveal>
