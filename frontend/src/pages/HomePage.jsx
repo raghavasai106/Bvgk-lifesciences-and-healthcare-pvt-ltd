@@ -16,6 +16,13 @@ const stats = [
     hint: "Expanding from a South India base towards pan India coverage" }
 ];
 
+const mapPins = [
+  { x: 38.94, y: 63.19, city: "Hyderabad", state: "Telangana", hq: true },
+  { x: 39.94, y: 69.88, city: "Amaravati", state: "Andhra Pradesh" },
+  { x: 27.05, y: 72.81, city: "Bengaluru", state: "Karnataka" },
+  { x: 35.97, y: 87.02, city: "Chennai", state: "Tamil Nadu" }
+];
+
 const divisions = [
   {
     name: "Anti Infectives & Critical Care",
@@ -119,7 +126,6 @@ export default function HomePage() {
         <div className="hero-deco hero-deco-3" />
         <div className="hero-content hero-split">
           <div className="hero-text">
-            <p className="hero-eyebrow">BVGK Lifesciences and Healthcare Pvt Ltd</p>
             <h1 className="hero-title">
               Advancing Health, <span>Enriching Lives</span>
             </h1>
@@ -228,7 +234,24 @@ export default function HomePage() {
             </Reveal>
             <Reveal delay={150}>
               <div className="map-wrap">
-                <img src="/india-coverage-map.svg" alt="Map of India highlighting BVGK's coverage across Telangana, Andhra Pradesh, Karnataka and Tamil Nadu" />
+                <div className="map-inner">
+                  <img src="/india-coverage-map.svg" alt="Map of India highlighting BVGK's coverage across Telangana, Andhra Pradesh, Karnataka and Tamil Nadu" />
+                  {mapPins.map(p => (
+                    <button
+                      key={p.city}
+                      type="button"
+                      className={`map-pin${p.hq ? " map-pin-hq" : ""}`}
+                      style={{ left: `${p.x}%`, top: `${p.y}%` }}
+                    >
+                      <span className="map-pin-dot" />
+                      <span className="map-pin-tooltip">
+                        <strong>{p.city}{p.hq && " — HQ"}</strong>
+                        <span>{p.state}</span>
+                        {p.hq && <span className="map-pin-note">Full address coming soon</span>}
+                      </span>
+                    </button>
+                  ))}
+                </div>
               </div>
             </Reveal>
           </div>

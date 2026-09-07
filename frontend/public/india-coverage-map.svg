@@ -5755,24 +5755,4 @@
 <circle cx="236.0" cy="34.3" r="1.7" fill="#CFE0DE" fill-opacity="0.75"/>
 <circle cx="226.7" cy="29.3" r="1.7" fill="#CFE0DE" fill-opacity="0.75"/>
 <circle cx="231.3" cy="29.3" r="1.7" fill="#CFE0DE" fill-opacity="0.75"/>
-<g>
-<circle cx="261.7" cy="428.7" r="5.5" fill="#01373D" stroke="#fff" stroke-width="2"/>
-<rect x="271.7" y="417.7" width="30.0" height="22" rx="11" fill="#ffffff" stroke="#01373D" stroke-opacity="0.15" filter="url(#shadow)"/>
-<text x="286.7" y="432.7" text-anchor="middle" font-family="Poppins, sans-serif" font-size="11" font-weight="700" fill="#01373D">TG</text>
-</g>
-<g>
-<circle cx="268.4" cy="474.1" r="5.5" fill="#01373D" stroke="#fff" stroke-width="2"/>
-<rect x="278.4" y="463.1" width="30.0" height="22" rx="11" fill="#ffffff" stroke="#01373D" stroke-opacity="0.15" filter="url(#shadow)"/>
-<text x="293.4" y="478.1" text-anchor="middle" font-family="Poppins, sans-serif" font-size="11" font-weight="700" fill="#01373D">AP</text>
-</g>
-<g>
-<circle cx="181.8" cy="494.0" r="5.5" fill="#01373D" stroke="#fff" stroke-width="2"/>
-<rect x="191.8" y="483.0" width="30.0" height="22" rx="11" fill="#ffffff" stroke="#01373D" stroke-opacity="0.15" filter="url(#shadow)"/>
-<text x="206.8" y="498.0" text-anchor="middle" font-family="Poppins, sans-serif" font-size="11" font-weight="700" fill="#01373D">KA</text>
-</g>
-<g>
-<circle cx="241.7" cy="590.2" r="5.5" fill="#01373D" stroke="#fff" stroke-width="2"/>
-<rect x="251.7" y="579.2" width="30.0" height="22" rx="11" fill="#ffffff" stroke="#01373D" stroke-opacity="0.15" filter="url(#shadow)"/>
-<text x="266.7" y="594.2" text-anchor="middle" font-family="Poppins, sans-serif" font-size="11" font-weight="700" fill="#01373D">TN</text>
-</g>
 </svg>

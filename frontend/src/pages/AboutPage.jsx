@@ -1,10 +1,15 @@
 import Reveal from "../components/Reveal";
+import CheckList from "../components/CheckList";
 
 const values = [
-  "GMP & regulatory compliance across every manufacturing partner",
-  "Rigorous QA/QC systems and analytical laboratory testing",
-  "Stability studies and documentation & data integrity on every batch",
-  "Supply reliability and packaging capability hospitals can depend on"
+  { label: "GMP & regulatory compliance across every manufacturing partner",
+    detail: "Every contract manufacturer holds a valid WHO GMP certificate, audited on a recurring basis." },
+  { label: "Rigorous QA/QC systems and analytical laboratory testing",
+    detail: "Each batch is tested in an accredited lab before release, covering purity, potency and sterility." },
+  { label: "Stability studies and documentation & data integrity on every batch",
+    detail: "Long term and accelerated stability data is maintained and traceable for every batch produced." },
+  { label: "Supply reliability and packaging capability hospitals can depend on",
+    detail: "Cold chain and packaging standards are matched to each product's stability requirements." }
 ];
 
 const registry = [
@@ -107,9 +112,7 @@ export default function AboutPage() {
             <Reveal>
               <span className="section-eyebrow">Quality Assurance</span>
               <h2 className="section-title">What drives every decision</h2>
-              <ul className="clean-list" style={{ marginTop: 24 }}>
-                {values.map(v => <li key={v}>{v}</li>)}
-              </ul>
+              <CheckList items={values} />
             </Reveal>
             <Reveal delay={150}>
               <div className="about-img-wrap">
