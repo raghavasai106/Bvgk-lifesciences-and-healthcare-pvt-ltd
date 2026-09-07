@@ -1,16 +1,22 @@
 import { Link } from "react-router-dom";
 import Reveal from "../components/Reveal";
 import Cta from "../components/Cta";
+import CheckList from "../components/CheckList";
 
 const eligibility = [
-  "An established distribution network in your territory",
-  "A reliable, well managed supply chain"
+  { label: "An established distribution network in your territory",
+    detail: "You should already be reaching hospitals and pharmacies across your state or region." },
+  { label: "A reliable, well managed supply chain",
+    detail: "Consistent stock handling, storage, and delivery timelines your customers can count on." }
 ];
 
 const offerings = [
-  "Competitive margins",
-  "Dedicated sales & marketing support",
-  "Access to a growing anti infective and clinical nutrition portfolio"
+  { label: "Competitive margins",
+    detail: "Transparent, volume friendly pricing designed to reward long term partners." },
+  { label: "Dedicated sales & marketing support",
+    detail: "A BVGK representative works directly with your team on outreach and hospital visits." },
+  { label: "Access to a growing anti infective and clinical nutrition portfolio",
+    detail: "Get early access to new products as our nutrition ranges launch." }
 ];
 
 export default function DistributorsPage() {
@@ -38,16 +44,12 @@ export default function DistributorsPage() {
             <Reveal>
               <span className="section-eyebrow">Eligibility</span>
               <h2 className="section-title">What we look for</h2>
-              <ul className="clean-list" style={{ marginTop: 24 }}>
-                {eligibility.map(e => <li key={e}>{e}</li>)}
-              </ul>
+              <CheckList items={eligibility} />
             </Reveal>
             <Reveal delay={150}>
               <span className="section-eyebrow">What you get</span>
               <h2 className="section-title">What we offer</h2>
-              <ul className="clean-list" style={{ marginTop: 24 }}>
-                {offerings.map(o => <li key={o}>{o}</li>)}
-              </ul>
+              <CheckList items={offerings} />
             </Reveal>
           </div>
         </div>
